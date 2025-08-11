@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="darkmode.css">
+        <title>FootballshirtsPK</title>
+        <style>
+            
+            body {
+                font-family: "Smooch Sans", sans-serif;
+                font-size: 30px;
+                justify-content: space-evenly;
+                text-transform: capitalize;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                
+            }
+            #buttondark {
+                background-color: black;
+                position: absolute;
+                right: 70px;
+                top: 90px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: none;
+                outline: none;
+                font-size: 20px;
+                color: black;
+            }
+            
+            .main {
+                box-sizing: border-box;
+                font-size: 16px;
+                color: rgb(32, 32, 32);
+                margin-left: 185px;
+                margin-top: 9px;
+                letter-spacing: 1.4px;
+            }
+            .div2 {
+                text-align: center;
+                float: left;
+                background-color: rgb(255, 255, 255);
+                width: 1100px;
+
+            }
+            .div4 {
+                margin-top: 23px;
+                margin-left: 185px;
+                float: left;
+            }
+            .btn {
+                border: none;
+                outline: none;
+                padding: 5px;
+                background-color: white;
+            }
+            .btn:hover {
+                color:rgb(94, 94, 94);
+            }
+            .div5 {
+                letter-spacing: 1.3px;
+                background-color: rgb(255, 255, 255);
+                padding: 20px 25px;
+                margin-left: 20px;
+                float: left;
+                display: block;
+                width: 800px;
+                flex-wrap: wrap;
+            }
+            
+            .div5 a {
+                color: gray;
+                font-size: 17px;
+                margin: 8px;
+                text-decoration: none;
+            }
+            .div5 a:hover {
+                text-decoration: underline;
+                color: black;
+            }
+            #hm {
+                color: black;
+                text-decoration: underline;
+            }
+            .div6 {
+                width: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                margin-top:40px ;
+                margin-left: 5px;
+                background-color: rgb(255, 255, 255);
+            }
+            .image {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+            .image:hover {
+                transform: scale(1.2);
+            }
+            .image2 {
+                width: 100%;
+                height: auto;
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: 1;
+            }
+            .div7 {
+                letter-spacing: 1.2px;
+                box-sizing: border-box;
+                margin-left: 195px;
+                font-size: medium;
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                text-align: left;
+                padding: 5px;
+            }
+            .div7 a {
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+            }
+            .div-img {
+                margin: 4px;
+                cursor: pointer;
+            }
+            #hov-img1:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/254EE302-2948-47D9-AD8D-A7E747AECF7B.jpg?v=1752500580&width=990");
+            }
+            #hov-img2:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/9A261A8B-8011-43CE-AF4E-5CAE93FAA858.jpg?v=1750440235&width=990");
+            }
+            #hov-img3:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/80B3C705-0878-4A2E-9B6E-B8107652ADF6.jpg?v=1751912517&width=990");
+            }
+            #hov-img4:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/376633C6-6F9E-4B7C-8C25-117F2D51C766.jpg?v=1754157284&width=990");                
+            }
+            #hov-img5:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/CB96E870-66E6-4F7C-AD86-1381E7C22109.jpg?v=1751571415&width=990");
+            }
+            #hov-img6:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/60414FF6-9CBC-4FC1-A3FD-DC4C3F88B5DB.jpg?v=1751571340&width=990");
+            }
+            #hov-img7:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/DEB3F132-61D2-49C3-9949-51BD0CA36B74.jpg?v=1753532401&width=990");
+            }
+            #hov-img8:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/6C2BC8BB-C5DA-4984-96ED-C8DD30A428D6.jpg?v=1752186686&width=990");
+            }
+            #hov-img9:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/C9571335-0738-4527-9845-848C4DC5AFF8.jpg?v=1752185469&width=990");
+            }
+            #hov-img10:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/C4B36E06-5CB9-4E8A-8742-609F4B85EE97.jpg?v=1753533046&width=990");
+            }
+            #hov-img11:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/313E7B6E-57F9-4B87-A2FC-2D49DD05173A.jpg?v=1752186050&width=990");
+            }
+            #hov-img12:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/BC9F7AC4-F62B-4964-B2B9-4E29EAEDF4B6.jpg?v=1748262141&width=990");
+            }
+            #hov-img13:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/EB1C5A7A-C8DE-4BC4-B594-CF90C1EE2D83.jpg?v=1753532747&width=990");
+            }
+            #hov-img14:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/EE6894CC-8E15-482B-ACCB-CA71A82B52B4.jpg?v=1752185853&width=990");
+            }
+            #hov-img15:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/D7011095-F306-4BB4-A518-78D42CEC5B3A.jpg?v=1752186742&width=990");
+            }
+            #hov-img16:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/7BC62301-B75E-4306-B3D4-F342DBEF029D.jpg?v=1752279851&width=990");
+            }
+            #hov-img17:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/1DC8FACB-1C3B-4173-B864-5E733FF48D3D.jpg?v=1752102010&width=990");
+            }
+            
+            #hov-img19:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/A5FA2939-DA49-494A-A768-4D2D7656365A.jpg?v=1752185741&width=990");
+            }
+            #hov-img20:hover {
+                content: url("https://footballshirtspk.com/cdn/shop/files/7D065272-5A55-4CC8-8E44-CC42E1B83726.jpg?v=1752105213&width=990");
+            }
+            .div-img-in {
+                overflow: hidden;
+                max-height: 350px;
+            }
+            .size {
+                font-size: large;
+            }
+            .div-img:hover .under {
+                text-decoration: underline;
+            }
+            .hov {
+                transition: .5s ease-in-out;
+            }
+            .hov:hover {
+                transform: scale(1.05);
+            }
+            .btn2 {
+                background-color: black;
+                color: white;
+                width: 100px;
+                height: 40px;
+                margin: 5px;
+                margin-left: 700px;
+                transition:border .02s;
+            }
+            .btn2:hover {
+                border: 1px solid black;
+            }
+            .div8 {
+                position: relative;
+                padding-top: 30px;
+                padding-bottom: 50px;
+                box-sizing: border-box;
+                margin-top: 35px;
+                text-align: center;
+                font-size: large;
+                background-color: rgb(228, 228, 228);
+                width: 100%;
+                height: 600px;
+            }
+            .comment {
+                padding: 18px;
+                position: relative;
+                overflow: hidden;
+                font-size: 17px;
+                display: inline-block;
+                width: 170px;
+                height: 200px;
+            }
+            .img3 {
+                position: absolute;
+                bottom: 0;
+                left: 83px;
+            }
+            .btn3 {
+                margin-left: 10px;
+                color: black;
+                border: none;
+                outline: none;
+                padding: 10px;
+                background-color: transparent;
+            }
+            .btn3:hover {
+                color:rgb(94, 94, 94);
+            }
+            .for {
+                position: absolute;
+                width: 450px;
+                text-align: left;
+                left: 220px;
+                bottom: 100px;
+                margin-bottom: 10px;
+            }
+            label {
+                word-spacing: 1.4px;
+                font-size: 20px;
+            }
+            input[type=email] {
+                background-color: white;
+                width:70% ;
+                padding: 13px 20px;
+                color: black;
+                /* margin: 8px; */
+                outline: none;
+                border: 1px groove rgb(115, 115, 115);
+                border-right: none;
+                float: left;
+            }
+            input[type=email]:hover{
+                border-color: rgb(55, 55, 55);
+            }
+            input[type=email]:focus{
+                border-color: rgb(0, 0, 0);
+            }
+            input[type=submit] {
+                background-color: white;
+                color: black;
+                outline: none;
+                border: 1px groove rgb(115, 115, 115);
+                padding: 13px;
+                border-left: none;
+            }
+            input[type=submit]:hover{
+                border-color: rgb(55, 55, 55);
+            }
+            input[type=submit]:focus{
+                border-color: rgb(0, 0, 0);
+            }
+            .bingo {
+                position: absolute;
+                bottom: 20px;
+                left: 220px;
+                color: rgb(94, 94, 94);
+                font-size: small;
+            }
+            .bingo a {
+                font-size: small;
+                color: rgb(94, 94, 94);
+            }
+            #image3 {
+                position: absolute;
+                float: right;
+                bottom: -105px;
+                right: 300px;
+            }
+            div {
+                opacity: 0;
+                transform: translateY(15px);
+                transition: opacity .5s ease-out, transform .5s ease-out;
+                will-change: opacity, transform;
+            }
+            div.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+    <body id="body">
+        <script>
+            function darkMode() {
+                const body = document.getElementById("body");
+                body.classList.toggle("dark-mode")
+            }
+            </script>
+            <script>            
+                document.addEventListener("DOMContentLoaded", function () { // domcontentloaded means that it covers whole webpage
+                const sections = document.querySelectorAll("div, #image2");//query is like getelementbyid but it covers more like classes and ids etc
+
+                const observer = new IntersectionObserver((entries, observer) => {//intersectionobserver checks whether a div or anything enters a viewport
+                    entries.forEach(entry => {// foreach starts a loop for entry
+                    if (entry.isIntersecting) {//isintersecting works under intersectionobserver. it checks that is this element viewed or not
+                        entry.target.classList.add("visible");//entry.taregt checks which element is being observed at the time
+                        observer.unobserve(entry.target);
+                    }
+                    });
+                }, {
+                    threshold: 0.11//it checks if the 10% of the area is covered over scrolling than it will show the div
+                });
+                
+                sections.forEach(section => {
+                    observer.observe(section);// .observe means it tells the observer variable to look it/track it
+                });
+                });
+    
+        </script>
+        <div class="main">
+            <div class="div1" style="float: left;">
+                <button type="button" class="btn" onclick="myfunc2()">&lt;</button>
+            </div>
+            <div class="div2">
+                <span id="demo">14-Days Easy Return And Exchange Policy!</span>
+            </div>
+            <div class="div3">
+                <button type="button" class="btn" onclick="myfunc()">&gt;</button>
+            </div>
+        </div>
+             <script>
+                function myfunc() {
+                    document.getElementById("demo").innerHTML= "Free Shipping On Rs.5,000 Or Above!";
+                }
+                function myfunc2() {
+                    document.getElementById("demo").innerHTML= "Cash On Delivery - All Over Pakistan!";
+                }
+                function myfunc3() {
+                    document.getElementById("demo").innerHTML= "14-Days Easy Return And Exchange Policy!";
+                }
+            </script>
+            <div class="div4">
+                <img src="logo.jpg" alt="logo" width="100px" height="60px">
+            </div>
+            <div class="div5">
+                <a href="footballshirtspk.htm" id="hm">home</a>
+                <a href="laliga.htm">la liga</a>
+                <a href="#">premier league</a>
+                <a href="#">serie A</a>
+                <a href="#">Retros</a>
+                <a href="#">ronaldo</a>
+                <a href="#">messi<a>
+                <a href="#">international</a>
+                <a href="#">anime</a>
+                <a href="#">shorts</a><br>
+                <a href="#" style="margin-top: 5px;">drill&nbsp;tops</a>
+                <a href="#">winter</a>
+                <a href="#">return and exchange policies</a>
+                <a href="#">washing guidelines</a>
+            </div>
+            <div class="div6">
+                <a href="search.htm"><img src="search-removebg-preview.png" alt="search" class="image" id="image-1" width="40px" height="23px" style="margin-right: 12px;"></a>
+                <a href="loginpk.htm"><img src="account2-removebg-preview.png" alt="search" class="image" id="image-2" width="32px" height="32px" style="margin-right: 20px;"></a>
+                <a href="addtocart.htm"><img src="cart-removebg-preview.png" alt="search" class="image" id="image-3" width="25px" height="25px"></a>
+            </div>
+            <button type="button" onclick="darkMode()" id="buttondark" class="buttondark">x</button>
+            <img src="homepageimg.jpg" alt="home page image" class="image2" id="image2">
+            <p style="margin-left: 205px;letter-spacing: 1.4px;font-size: 25px;" id="para">new arrivals</p>
+            <div class="div7">
+                <div class="div-img">
+                    <a href="player3.htm" target="_self">
+                    <div class="div-img-in">
+                    <img id="hov-img1" src="https://footballshirtspk.com/cdn/shop/files/6AB68ABC-C32A-47EC-A9CA-553125C3B06D.jpg?v=1752500580&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">real 25/26 home kit</p>
+                    <p class="size">from RS.2,399.00 PKR</p>
+                    </a>
+                </div>
+                <div class="div-img">
+                    <a href="player2.htm" target="_self">
+                    <div class="div-img-in">
+                    <img id="hov-img2" src="https://footballshirtspk.com/cdn/shop/files/C639E3EE-07F7-49D9-8C4F-1D420FC2E63C.jpg?v=1749078191&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">barca 25/26 home kit</p>
+                    <p class="size">from RS.1,699.00 PKR</p>
+                    </a>
+                </div>
+                <div class="div-img">
+                    <a href="player.htm"></a>
+                    <div class="div-img-in">
+                    <img id="hov-img3" src="https://footballshirtspk.com/cdn/shop/files/CC8D19B1-890F-4B87-8B6A-38F56E8C3D59.jpg?v=1751912517&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">real 25/26 home kit third kit</p>
+                    <p class="size">from RS.2,499.00 PKR</p>
+                    </a>
+                </div>
+                <div class="div-img">
+                    <a href="player4.htm" target="_self">
+                    <div class="div-img-in">
+                    <img id="hov-img4" src="https://footballshirtspk.com/cdn/shop/files/3E56C8BE-5100-4E67-A974-C6CFD4162439.jpg?v=1754157284&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">Barca 24/25 Away Jersey Player Version</p>
+                    <p class="size">from RS.5,999.00 PKR</p>
+                    </a>
+                </div>
+            </div>
+            <div class="div7">
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img5" src="https://footballshirtspk.com/cdn/shop/files/4DC97346-9441-465C-A5AE-C85EEA5B4CC0.jpg?v=1751571415&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">portogual 25 away kit TPU full sleeves</p>
+                    <p class="size">from RS.2,499.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img6" src="https://footballshirtspk.com/cdn/shop/files/9FEEEF8E-F85C-4B17-9BAD-DEC20FD9030A.jpg?v=1751571340&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">portogual 25 away kit TPU</p>
+                    <p class="size">from RS.2,499.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img7" src="https://footballshirtspk.com/cdn/shop/files/CAC30778-8448-4BED-8866-7D5FB038BC4C.jpg?v=1753532402&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">real 17/18 third jersey half sleeves</p>
+                    <p class="size">from RS.2,399.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img8" src="https://footballshirtspk.com/cdn/shop/files/870F6A01-3E69-46BF-ADF9-BA3F3C21329B.jpg?v=1752185357&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">real x dragon CB</p>
+                    <p class="size">from RS.3,999.00 PKR</p>
+                </div>
+            </div>
+            <div class="div7">
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img9" src="https://footballshirtspk.com/cdn/shop/files/96C6D426-B4CE-410B-9C71-AA7744E43BA0.jpg?v=1752185469&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">real x ocean blue</p>
+                    <p class="size">from RS.3,999.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img10" src="https://footballshirtspk.com/cdn/shop/files/5704C56A-692B-4971-AB3B-9AABFBA5331E.jpg?v=1753533047&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">barca 8/9 home jersey half sleeves</p>
+                    <p class="size">from RS.2,299.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img11" src="https://footballshirtspk.com/cdn/shop/files/82D5F9D8-7E97-48F5-B6ED-09C47AF9398D.jpg?v=1752186050&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">real x dragon BR</p>
+                    <p class="size">from RS.3,999.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img12" src="https://footballshirtspk.com/cdn/shop/files/8737C28A-E826-49DE-BE8C-30EC6AA50EC4.jpg?v=1748262142&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">real betis x naruto</p>
+                    <p class="size">from RS.3,999.00 PKR</p>
+                </div>
+            </div>
+            <div class="div7">
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img13" src="https://footballshirtspk.com/cdn/shop/files/2796D7B6-F1D6-48D6-8CC1-716BE7397FBD.jpg?v=1753532746&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">barca 8/9 home jersey full sleeves</p>
+                    <p class="size">from RS.2,399.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img14" src="https://footballshirtspk.com/cdn/shop/files/EE6894CC-8E15-482B-ACCB-CA71A82B52B4.jpg?v=1752185853&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">japan x DBZ blue</p>
+                    <p class="size">from RS.3,999.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img15" src="https://footballshirtspk.com/cdn/shop/files/162AA667-7516-469A-AA2C-A32C1C876FCF.jpg?v=1752186741&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">real x dragon purple</p>
+                    <p class="size">from RS.3,999.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img16" src="https://footballshirtspk.com/cdn/shop/files/5E023C2C-F700-4311-A06E-FB78D480F492.jpg?v=1752279851&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">ac milan 8/9 home jersey full sleeves</p>
+                    <p class="size">from RS.5,999.00 PKR</p>
+                </div>
+            </div>
+            <div class="div7">
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img17" src="https://footballshirtspk.com/cdn/shop/files/5FEA478E-864A-4D8D-9B79-D52FBC256827.jpg?v=1752102010&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">real x bat</p>
+                    <p class="size">from RS.3,999.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img18" src="https://footballshirtspk.com/cdn/shop/files/3CBB0077-2102-487F-A970-777909434C30.jpg?v=1752105480&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">barca 14/15 home jersye</p>
+                    <p class="size">from RS.5,500.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img19" src="https://footballshirtspk.com/cdn/shop/files/79250B49-52E1-4F7B-9B29-DE7ACCABE920.jpg?v=1752185740&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">japan x captain tsubasa</p>
+                    <p class="size">from RS.3,999.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img id="hov-img20" src="https://footballshirtspk.com/cdn/shop/files/F63F293B-09B4-4F58-A7C5-B584A76DC825.jpg?v=1752105216&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">real madrid 10/11 home jersey</p>
+                    <p class="size">from RS.5,999.00 PKR</p>
+                </div>
+            </div>
+            
+        <button class="btn2" type="button">View all</button>
+        <div class="div8">
+            <span style="margin-top: 15px;padding-top:15px ;font-family: Arial, Helvetica, sans-serif;">let customers speak for us</span><br>
+            <span>&#9733 &#9733 &#9733 &#9733 &#9733</span><br>
+            <span style="font-weight: lighter;font-size: 20px;color: rgb(41, 41, 41);">from 68 reviews</span>
+            <div>
+                <div class="comment">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>Only the best</b><br>
+Only the best, you will never get this type of quality shirts anywhere but footballshirts PK</span><br><br>
+                        <div class="img3"><span>ali raza</span><br>
+                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/86940F47-D5B2-4C5E-85D2-82D90A975C58_140x140.jpg?v=1748096137" alt="miamicom" width="50px" height="60px">
+                        </div>
+               </div>
+                <div class="comment">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>Great</b><br>
+Great quality<br><br><div class="img3"><span>hashir</span><br>
+                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/83E67D29-99D7-4398-8D54-9EB7DF90C16F_140x140.jpg?v=1748529538" alt="realcom"  width="50px" height="60px">
+                     </div>   
+                    </span>
+                </div>
+                <div class="comment">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>great just the colors a bit light than</b><br>
+great just the colors a bit light than original<br><br>
+                        <div class="img3"><span>anonymous</span><br>
+                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/C639E3EE-07F7-49D9-8C4F-1D420FC2E63C_140x140.jpg?v=1749078191" alt="realcom" width="50px" height="60px">
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="opt">
+                <button type="button" class="btn3">&lt;</button>
+                <button type="button" class="btn3">&gt;</button>
+            </div>
+            <div class="for">
+                <form>
+                    <label for="email">subscribe to our email</label><br><br>
+                    <input type="email" id="email" class="email" placeholder="email">
+                    <input type="submit" id="sub" class="sub" value="&#8594;">
+                </form>
+            </div>
+            <div class="bingo">© 2025,<a href="#" class="link">FootballshirtsPK</a><a href="#" class="link">Powered by Shopify</a>&nbsp;.&nbsp;
+<a href="#" class="link">Privacy policy</a></div>
+                <div>
+                    <img src="instacon-removebg-preview.png" class="image" id="image3" alt="instaicon" width="20px" height="20px">
+                </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>Fade In on Scroll</title>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+    }
+
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+      will-change: opacity, transform;
+      background: white;
+      margin: 50px auto;
+      padding: 40px;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+    .fade-in-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+        }
+        .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+      will-change: opacity, transform;
+      background: white;
+      margin: 50px auto;
+      padding: 40px;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+        }
+    </style>
+</head>
+<body >
+
+  <div style="height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <h1>Scroll Down</h1>
+    </div>
+
+  <div class="fade-in-section">
+    <h2>Section 1</h2>
+    <p>This fades in when you scroll here.</p>
+  </div>
+
+  <div class="fade-in-section">
+    <h2>Section 2</h2>
+    <p>And this one too.</p>
+  </div>
+
+  <div class="fade-in-section">
+    <h2>Section 3</h2>
+    <p>All using IntersectionObserver.</p>
+  </div>
+  <div class="fade-in">
+    <h2>Section 3</h2>
+    <p>All using IntersectionObserver.</p>
+  </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () { // domcontentloaded means that it covers whole webpage
+      const sections = document.querySelectorAll(".fade-in-section, .fade-in");//query is like getelementbyid but it covers more like classes and ids etc
+
+      const observer = new IntersectionObserver((entries, observer) => {//intersectionobserver checks whether a div or anything enters a viewport
+        entries.forEach(entry => {// foreach starts a loop for entry
+          if (entry.isIntersecting) {//isintersecting works under intersectionobserver. it checks that is this element viewed or not
+            entry.target.classList.add("visible");//entry.taregt checks which element is being observed at the time
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1//it checks if the 10% of the area is covered over scrolling than it will show the div
+      });
+      
+      sections.forEach(section => {
+        observer.observe(section);// .observe means it tells the observer variable to look it/track it
+      });
+    });
+    </script>
+
+</body>
+</html>

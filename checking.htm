@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: rgb(230, 220, 206);
+      opacity: 0;
+      transition: opacity 2s ease;
+
+    }
+    body.fade-in {
+      opacity: 1;
+    }
+    #btn3 {
+      width: 100px;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body id="body1">
+  <button type="button" id="btn1" onclick="getDone()" width="100px" style="border-radius: 50%;"><img src="cancel.png" width="30px" height="30px"></button>
+  <div id="div1" style="width: 200px;height: 100px;background-color: rgb(164, 149, 127);">
+    lets see
+  </div>
+  <img src="homepageimg.jpg" id="home" width="300px" height="210px">
+<script>
+  const x = document.getElementById("home");
+  let image;
+
+  x.addEventListener("mouseenter",() =>{ 
+    x.style.transition = "opacity 0.5s ease";
+    x.style.opacity = "0.6";
+  });
+  x.addEventListener("mouseleave", () =>{
+    x.style.transition = "opacity 0.2s ease";
+    x.style.opacity = "1";
+  });
+  setTimeout(() => {
+    x.style.transition = "opacity 0.6s ease";
+    x.style.opacity = "1";
+  }, 2000);
+
+ let isOn = false;
+  function getDone() {
+  const btn = document.getElementById("body1");
+  const btn2 = document.getElementById("div1");
+  
+  if (!isOn) {
+    btn.style.backgroundColor = "rgb(13,14,15)";
+    btn2.style.backgroundColor = "rgb(58,58,58)"
+    btn2.style.color = "white"
+    isOn = true;
+  }else {
+    btn.style.backgroundColor = "rgb(230,220,206)";
+    btn2.style.backgroundColor = "rgb(164, 149, 127)";
+    btn2.style.color = "black";
+    isOn = false;
+  }
+  }
+
+</script>
+<button type="button" id="btn3" onclick="change()">click here</button>
+<div id="div2" style="width: 200px;height: 200px;background-color: aquamarine;">dont click</div>
+<script>
+  let isOff = false;
+  function change() {
+  const get = document.getElementById("div2");
+
+  if(!isOff) {
+    get.style.backgroundColor = "purple";
+    get.style.border = "2px solid black";
+    isOff = true;
+  }
+  else if (isOff) {
+    get.style.color="pink";
+    isOff = false
+  }
+  else if (isOff) {
+    get.style.fontSize = "24px";
+    isOff = true;
+  }
+  else {
+    get.style.backgroundColor = "white";
+    isOff = false;
+  }
+  } 
+
+   function myfunc1() {
+     get.style.backgroundColor = "purple";
+   }
+   function myfunc2() {
+     get.style.border = "2px solid black";
+   }
+   function myfunc3() {
+     get.style.color = "pink";
+   }
+   function allfunc() {
+     myfunc1();
+     myfunc2();
+     myfunc3();
+   }
+  //  let get.addEventListener("click", allfunc())
+</script>
+
+<button id="myButton">Click me</button>
+<div id="div3" style="width: 200px;height: 150px;background-color: coral;">some centext</div>
+<div id="div4" style="width: 200px;height: 150px;background-color: violet;">some other centext</div>
+
+<script>
+  let clickCount = 0;
+
+  const action2 = [
+    () => document.getElementById("div3").style.backgroundColor = "purple",
+    () => document.getElementById("div4").style.fontSize = "20px",
+    () => document.body.style.backgroundColor = "blue",
+];
+
+  document.getElementById("myButton").addEventListener("click", function() {
+    action2[clickCount % action2.length]();
+    clickCount++;
+  });
+</script>
+
+<button id="myButton2">Click me</button>
+<p id="message">Waiting for click...</p>
+
+<script>
+  let clickCount2 = 0;
+
+  const actions = [
+    () => document.getElementById("message").innerText = "First click: Hello!",
+    () => document.body.style.backgroundColor = "#f0a",
+    () => alert("Third click: You clicked 3 times!"),
+    () => document.getElementById("message").innerText = "Resetting...",
+  ];
+
+  document.getElementById("myButton2").addEventListener("click", function () {
+    actions[clickCount2 % actions.length](); // Cycle through actions
+    clickCount2++;
+  });
+</script>
+
+<button id="myButton3">Click me</button>
+<div id="div5" style="width: 200px;height: 150px;background-color: rgb(166, 126, 166);">some other centext</div>
+<div id="div6" style="width: 200px;height: 150px;background-color: rgb(163, 39, 163);">some other centext</div>
+
+
+<script>
+  let clickCount3 = 0;
+  let maxClicks = 3;
+
+  document.getElementById("myButton3").addEventListener("click", function () {
+    clickCount3++;
+
+    switch (clickCount3) {
+      case 1:
+        document.getElementById("div5").style.transform = "scaleX(1.3)";
+        break;
+      case 2:
+        document.getElementById("div5").style.backgroundColor = "orange";
+        break;
+      case 3:
+        document.getElementById("div6").style.color = "blue";
+        break;
+      default:
+       // or handle more steps
+        break;
+    }
+     if (clickCount3 === maxClicks) {
+      clickCount3 = 0;
+     }
+  });
+</script>
+<button id="myButton4">Click me</button>
+<p id="message2">Waiting for click...</p>
+
+<script>
+  let clickCount4 = 0;
+  const maxClicks2 = 4; // number of different actions
+
+  document.getElementById("myButton4").addEventListener("click", function () {
+    clickCount4++;
+
+    switch (clickCount4) {
+      case 1:
+        document.getElementById("message2").innerText = "First click: Hello!";
+        break;
+
+      case 2:
+        document.body.style.backgroundColor = "#add8e6"; // light blue
+        break;
+
+      case 3:
+        alert("Third click: You clicked three times!");
+        break;
+
+      case 4:
+        document.getElementById("message2").innerText = "Fourth click: Resetting now...";
+        document.body.style.backgroundColor = "white";
+        break;
+
+      default:
+        // Do nothing on unexpected clicks (won't happen)
+        break;
+    }
+
+    // Reset counter AFTER doing the last action
+    if (clickCount4 === maxClicks2) {
+      clickCount4 = 0;
+    }
+  });
+  let sum = 1;
+  for (let j = 1;j <= 5;j++) {
+    console.log(sum += j);
+  }
+  let k = 0;
+  do {
+    console.log("k =", k);
+    k++;
+  } while(k <= 9);
+  let obj = {
+    name:"saad",
+    age:18,
+    school:"KPS",
+    result:"86%",
+  }
+  for (let key in obj) {
+    console.log(key + ":" + obj[key]);
+  }
+  let even = 0;
+  for (let i = 0;i <= 10;i++) {
+    if (i%2 != 0) {
+      console.log(i)
+    }
+  }
+  //  let ask = prompt("guess any number from 1-10");
+  //  let gamenum = 7;
+  //  while (ask != gamenum) {
+  //   ask = prompt("guess again :")
+  //  }
+   console.log("congrats you entered the right number")
+   let str = "    saad-ur -rehman   "
+   console.log(str)
+
+   let str2 = "hello saad";
+   console.log(str2.replace("saad", "hamza"))
+</script>
+<div id="divfade" style="width: 200px;height: 150px;text-align: center;opacity:0;background: teal;">
+  fade me
+</div>
+<button onclick="fadein(document.getElementById('divfade'))">fade in</button>
+<button onclick="fadeout(document.getElementById('divfade'))">fade out</button>
+<script>
+  window.addEventListener("load", () => {
+    document.body.classList.add('fade-in');
+  });
+</script>
+
+</body>
+</html>

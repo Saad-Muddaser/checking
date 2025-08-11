@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="size.css">
+        <title>madrid 25/26 home kit</title>
+        <style>
+            body {
+                font-size: 10px;
+                text-transform: capitalize;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                
+            }
+            .main {
+                font-family: "Smooch Sans", sans-serif;
+                box-sizing: border-box;
+                font-size: 16px;
+                color: rgb(32, 32, 32);
+                margin-left: 185px;
+                margin-top: 9px;
+                letter-spacing: 1.2px;
+            }
+            .div2 {
+                text-align: center;
+                float: left;
+                background-color: rgb(255, 255, 255);
+                width: 1100px;
+
+            }
+            .div4 {
+                margin-top: 20px;
+                margin-left: 185px;
+                float: left;
+            }
+            .btn {
+                border: none;
+                outline: none;
+                padding: 5px;
+                background-color: white;
+            }
+            .btn:hover {
+                color:rgb(94, 94, 94);
+            }
+            .div5 {
+                font-family: "Smooch Sans", sans-serif;
+                font-size: 30px;
+                letter-spacing: 1.3px;
+                background-color: rgb(255, 255, 255);
+                padding: 20px 25px;
+                margin-left: 20px;
+                float: left;
+                display: block;
+                width: 800px;
+                flex-wrap: wrap;
+            }
+            
+            .div5 a {
+                color: gray;
+                font-size: 16px;
+                margin: 8px;
+                text-decoration: none;
+            }
+            .div5 a:hover {
+                text-decoration: underline;
+                color: black;
+            }
+            #hm {
+                color: black;
+                text-decoration: underline;
+            }
+            .div6 {
+                width: 150px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 10px;
+                margin-top:38px ;
+                margin-left: 5px;
+                background-color: rgb(255, 255, 255);
+            }
+            .image {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+            .image:hover {
+                transform: scale(1.2);
+            }
+            .main-frame {
+                display: flex;
+                justify-content: center;
+                /* align-items: center; */
+                width: 100%;
+                /* height: 1430px; */
+            }
+            .pk {
+                margin-left: 160px;
+                overflow:hidden;
+                border: none;
+                height: 3630px;;
+                width: 60%;
+            }
+            .div-1 {
+                position: sticky;
+                top: 0px;
+                
+                text-align: left;
+                background-color: rgb(255, 255, 255);
+                height: 1130px;
+                width: 40%;
+                font-size: 17px;
+                letter-spacing: 1.4px;
+            }
+            .btn4 {
+               padding: 10px 20px;
+               border: 1px solid rgb(94, 94, 94);
+               border-radius: 40px;
+               margin: 4px; 
+               color: black;
+               background-color: white;
+            }
+            .btn4:hover {
+                border-color: black;
+            }
+            .btn4:focus {
+                border: 1px solid black;
+                background-color: black;
+                color: white;
+            }
+            .btn5 {
+               opacity: 0.8;
+               padding: 10px 20px;
+               border: 1px solid rgb(94, 94, 94);
+               border-radius: 40px;
+               margin: 4px; 
+               color: black;
+               background-color: white;
+            }
+            .btn5:focus {
+                border: 1px solid black;
+                background-color: black;
+                color: white;
+            }
+            .btnhi {
+                padding: 10px 20px;
+               border: 1px solid rgb(94, 94, 94);
+               border-radius: 40px;
+               margin: 4px; 
+               color: black;
+               background-color: white;
+            }
+            .btnhi:hover {
+                border-color: black;
+            }
+            .btnhi:focus {
+                border: 1px solid black;
+                background-color: black;
+                color: white;
+            }
+            .btnby {
+                padding: 10px 20px;
+               border: 1px solid rgb(94, 94, 94);
+               border-radius: 40px;
+               margin: 4px; 
+               color: black;
+               background-color: white;
+            }
+            .btnby:hover {
+                border-color: black;
+            }
+            .btnby:focus {
+                border: 1px solid black;
+                background-color: black;
+                color: white;
+            }
+            .btnch {
+               opacity: 0.8;
+               padding: 10px 20px;
+               border: 1px solid rgb(94, 94, 94);
+               border-radius: 40px;
+               margin: 4px; 
+               color: black;
+               background-color: white;
+            }
+            .btnch:focus {
+                border: 1px solid black;
+                background-color: black;
+                color: white;
+            }
+            .txt {
+                width: 70px;
+                color: black;
+                text-align: center;
+                padding: 15px 5px;
+                outline: none;
+                float: left;
+                border-left: none;
+                border-right: none;
+                border-top:1px solid rgb(94, 94, 94) ;
+                border-bottom:1px solid rgb(94, 94, 94) ;
+            }
+            .butn1 {
+                padding: 15px 10px;
+                text-align: center;
+                color: black;
+                background-color: white;
+                border: 1px solid rgb(94, 94, 94);
+                border-right: none;
+                outline: none;
+                float: left;
+            }
+            .butn2 {
+                padding: 15px 10px;
+                text-align: center;
+                color: black;
+                background-color: white;
+                outline: none;
+
+                border: 1px solid rgb(94, 94, 94);
+                border-left: none;
+            }
+            .link1 {
+                color: rgb(48, 48, 48);
+                border: none;
+                outline: none;
+            }
+            .link1:hover {
+                color: black;
+                text-decoration: underline;
+            }
+            
+            .btn6 {
+                width: 350px;
+                padding: 15px;
+                text-align: center;
+                color: black;
+                background-color: white;
+                
+                margin: 5px;
+                overflow: hidden;
+                box-sizing: border-box;
+                outline: none;
+            }
+            .btn6:hover {
+                box-sizing: border-box;
+                border: 2px solid black;
+            }
+            .btn7 {
+                width: 350px;
+                padding: 15px;
+                text-align: center;
+                color: rgb(255, 255, 255);
+                background-color: rgb(0, 0, 0);
+                overflow: hidden;
+                margin: 5px;
+                outline: none;
+                box-sizing: border-box;
+
+            }
+            .btn7:hover {
+                border: 2px solid black;
+            }
+            .link2 {
+                float: left;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: black;
+            }
+            .link2 span:hover {
+                text-decoration: underline;
+            }
+            .div-2 {
+                overflow: hidden;
+                width: 100%;
+                height: 500px;
+                background-color: crimson;
+            }
+            .div7 {
+                font-family: "Smooch Sans", sans-serif;
+                letter-spacing: 1.2px;
+                box-sizing: border-box;
+                margin-left: 205px;
+                font-size: medium;
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                text-align: left;
+                padding: 5px;
+            }
+            .div-img {
+                margin: 4px;
+                cursor: pointer;
+            }
+            .div-img-in {
+                overflow: hidden;
+                max-height: 350px;
+            }
+            .size {
+                font-size: large;
+            }
+            .div-img:hover .under {
+                text-decoration: underline;
+            }
+            .hov {
+                transition: .5s ease-in-out;
+            }
+            .hov:hover {
+                transform: scale(1.05);
+            }
+            .div8 {
+                position: relative;
+                padding-top: 30px;
+                padding-bottom: 50px;
+                box-sizing: border-box;
+                margin-top: 35px;
+                text-align: center;
+                font-size: large;
+                background-color: rgb(228, 228, 228);
+                width: 100%;
+                height: 600px;
+            }
+            .comment {
+                padding: 18px;
+                position: relative;
+                overflow: hidden;
+                font-size: 17px;
+                display: inline-block;
+                width: 170px;
+                height: 200px;
+            }
+            .img3 {
+                position: absolute;
+                bottom: 0;
+                left: 83px;
+            }
+            .btn3 {
+                margin-left: 10px;
+                color: black;
+                border: none;
+                outline: none;
+                padding: 10px;
+                background-color: transparent;
+            }
+            .btn3:hover {
+                color:rgb(94, 94, 94);
+            }
+            .for {
+                position: absolute;
+                width: 450px;
+                text-align: left;
+                left: 220px;
+                bottom: 100px;
+                margin-bottom: 10px;
+            }
+            label {
+                word-spacing: 1.4px;
+                font-size: 20px;
+            }
+            input[type=email] {
+                background-color: white;
+                width:70% ;
+                padding: 13px 20px;
+                color: black;
+                /* margin: 8px; */
+                outline: none;
+                border: 1px groove rgb(115, 115, 115);
+                border-right: none;
+                float: left;
+            }
+            input[type=email]:hover{
+                border-color: rgb(55, 55, 55);
+            }
+            input[type=email]:focus{
+                border-color: rgb(0, 0, 0);
+            }
+            input[type=submit] {
+                background-color: white;
+                color: black;
+                outline: none;
+                border: 1px groove rgb(115, 115, 115);
+                padding: 13px;
+                border-left: none;
+            }
+            input[type=submit]:hover{
+                border-color: rgb(55, 55, 55);
+            }
+            input[type=submit]:focus{
+                border-color: rgb(0, 0, 0);
+            }
+            .bingo {
+                position: absolute;
+                bottom: 20px;
+                left: 220px;
+                color: rgb(94, 94, 94);
+                font-size: small;
+            }
+            .bingo a {
+                font-size: small;
+                color: gray;
+                font-size: 10px;
+                margin: 8px;
+                text-decoration: none;
+            }
+            .bingo a:hover {
+                text-decoration: underline;
+                color: black;
+            }
+            #image3 {
+                position: absolute;
+                float: right;
+                bottom: 120px;
+                right: 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="div1" style="float: left;">
+                <button type="button" class="btn" onclick="myfunc()">&lt;</button>
+            </div>
+            <div class="div2">
+                <span id="demo">14-Days Easy Return And Exchange Policy!</span>
+            </div>
+            <div class="div3">
+                <button type="button" class="btn" onclick="myfunc2()">&gt;</button>
+            </div>
+        </div>
+             <script>
+                function myfunc() {
+                    document.getElementById("demo").innerHTML= "Free Shipping On Rs.5,000 Or Above!";
+                }
+                function myfunc2() {
+                    document.getElementById("demo").innerHTML= "Cash On Delivery - All Over Pakistan!";
+                }
+                function myfunc3() {
+                    document.getElementById("demo").innerHTML= "14-Days Easy Return And Exchange Policy!";
+                }
+            </script>
+            <div class="div4">
+                <img src="logo.jpg" alt="logo" width="100px" height="60px">
+            </div>
+            <div class="div5">
+                <a href="#">home</a>
+                <a href="#">la liga</a>
+                <a href="#">premier league</a>
+                <a href="#">serie A</a>
+                <a href="#">Retros</a>
+                <a href="#">ronaldo</a>
+                <a href="#">messi<a>
+                <a href="#">international</a>
+                <a href="#">anime</a>
+                <a href="#">shorts</a><br>
+                <a href="#" style="margin-top: 5px;">drill&nbsp;tops</a>
+                <a href="#">winter</a>
+                <a href="#">return and exchange policies</a>
+                <a href="#">washing guidelines</a>
+            </div>
+            <div class="div6">
+                <img src="search-removebg-preview.png" alt="search" class="image" width="40px" height="23px" style="margin-right: 12px;">
+                <img src="account2-removebg-preview.png" alt="search" class="image" width="32px" height="32px" style="margin-right: 20px;">
+                <img src="cart-removebg-preview.png" alt="search" class="image" width="25px" height="25px">
+            </div>
+        <div class="main-frame">
+            <iframe src="picturereal.htm" title="footballshirtspk" class="pk" id="myIframe"></iframe>
+            <div class="div-1">
+                <p style="font-size: 12px;color: rgb(94, 94, 94);font-weight: lighter;">footballshirtspk</p>
+                <h1 style="word-spacing:1.8px;font-weight: 300;">real 25/26 home<br> kit</h1>
+                <p>Rs.2,699.00 PKR</p>
+                <p style="font-size: 12px;color: rgb(94, 94, 94);font-weight: lighter;">size</p>
+                <div class="div-4">
+                    <button type="button" class="btn4">S</button>
+                    <button type="button" class="btn4">M</button>
+                    <button type="button" class="btn4">L</button>
+                    <button type="button" class="btn4">XL</button>
+                </div>
+                <p style="font-size: 12px;color: rgb(94, 94, 94);font-weight: lighter;">player options</p>
+                <div class="div-5">
+                    <button type="button" class="btn5"><del>WITHOUT NAME</del></button>
+                    <button type="button" class="btn5"><del>MABBPE 9</del></button><br>
+                    <button type="button" class="btnhi">BELLINGHAM 5</button>
+                    <button type="button" class="btn5"><del>VALVERDE 8</del></button><br>
+                    <button type="button" class="btn5"><del>VINI.JR 7</del></button>
+                    <button type="button" class="btn5"><del>RONALDO 7</del></button>
+                </div>
+                <p style="font-size: 12px;color: rgb(94, 94, 94);font-weight: lighter;">buy</p>
+                <div class="div-6">
+                    <button type="button" class="btnby">Shirt only</button>
+                    <button type="button" class="btnch"><del>Kit</del></button>
+                </div>
+                <p style="font-size: 12px;color: rgb(94, 94, 94);font-weight: lighter;">quantity</p>
+                <div class="div-7">
+                    <input type="button" id="butn" class="butn1" value="-">
+                    <input type="text" id="txt" class="txt" value="1">
+                    <input type="button" id="butn" class="butn2" value="+">
+                </div><br><br>
+                <button onclick="showPopup()" class="link1" style="font-size: 14px;">size chart</button><br><br><br>
+                <div class="div-8">
+                    <button type="button" class="btn6">add to cart</button><br>
+                    <button type="button" class="btn7"><a href="billingpk.htm" style="text-decoration: none;color: white;">buy it now</a></button>
+                </div>
+                <p style="font-size: 15px;color: rgb(94, 94, 94);letter-spacing: 1.2px;">Original TPU Rubber Badges<br><br><br>
+
+
+                    Stretchable Ribbed Sleeve and Neck<br><br><br>
+
+
+                    Interlock Sports Fabric<br><br>
+
+                    Velvet Patches </p><br>
+                    <div class="div-9">
+                        <a href="#" class="link2"><img src="share.png" alt="share" width="20px" height="20px" class="image4"><span>&nbsp;share</span></a>
+                    </div>
+            </div>
+        </div>
+    <div class="modal" id="popupModal">
+        <div class="in-modal">
+            <h2 style="margin-left: 30px;color: rgb(36, 36, 36);font-weight: light;">Size Chart</h2>
+            <button onclick="closePopup()" class="botn">X</button>
+            <table style="width: 90%;">
+                <tr>
+                    <td>size</td>
+                    <td>chest(inches)</td>
+                    <td>length(inches)</td>
+                </tr>
+                <tr>
+                    <td style="width: 55%;">small</td>
+                    <td>18</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>medium</td>
+                    <td>19</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>large</td>
+                    <td>20</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>XL</td>
+                    <td>21</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>XXL</td>
+                    <td>22</td>
+                    <td>30</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function showPopup() {
+    document.getElementById("popupModal").style.display = "flex";
+  }
+
+  function closePopup() {
+    document.getElementById("popupModal").style.display = "none";
+  }
+  </script>
+        <h3 style="font-size: large;margin: 18px;margin-left: 210px;font-weight: 500;letter-spacing: 1.4px;">you may also like</h3>
+            <div class="div7">
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img src="https://footballshirtspk.com/cdn/shop/files/6AB68ABC-C32A-47EC-A9CA-553125C3B06D.jpg?v=1752500580&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">real 25/26 home kit</p>
+                    <p class="size">from RS.2,399.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img src="https://footballshirtspk.com/cdn/shop/files/C639E3EE-07F7-49D9-8C4F-1D420FC2E63C.jpg?v=1749078191&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">barca 25/26 home kit</p>
+                    <p class="size">from RS.1,699.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img src="https://footballshirtspk.com/cdn/shop/files/CC8D19B1-890F-4B87-8B6A-38F56E8C3D59.jpg?v=1751912517&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">real 25/26 home kit third kit</p>
+                    <p class="size">from RS.2,499.00 PKR</p>
+                </div>
+                <div class="div-img">
+                    <div class="div-img-in">
+                    <img src="https://footballshirtspk.com/cdn/shop/files/2C5D7378-D276-4262-B70B-FCE14EDC1FFC.jpg?v=1752358627&width=990" alt="madrid1f" class="hov" width="265px" height="350px">
+                    </div>
+                    <p class="under">real 25/26 third kit full sleeves</p>
+                    <p class="size">from RS.2,499.00 PKR</p>
+                </div>
+            </div>
+        <div class="div8">
+            <span style="margin-top: 15px;padding-top:15px ;font-family: Arial, Helvetica, sans-serif;">let customers speak for us</span><br>
+            <span>&#9733 &#9733 &#9733 &#9733 &#9733</span><br>
+            <span style="font-weight: lighter;font-size: 20px;color: rgb(41, 41, 41);">from 68 reviews</span>
+            <div>
+                <div class="comment">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>Only the best</b><br>
+Only the best, you will never get this type of quality shirts anywhere but footballshirts PK</span><br><br>
+                        <div class="img3"><span>ali raza</span><br>
+                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/86940F47-D5B2-4C5E-85D2-82D90A975C58_140x140.jpg?v=1748096137" alt="miamicom" width="50px" height="60px">
+                        </div>
+                </div>
+                <div class="comment">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>Great</b><br>
+Great quality<br><br><div class="img3"><span>hashir</span><br>
+                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/83E67D29-99D7-4398-8D54-9EB7DF90C16F_140x140.jpg?v=1748529538" alt="realcom"  width="50px" height="60px">
+                     </div>   
+                    </span>
+                </div>
+                <div class="comment">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>great just the colors a bit light than</b><br>
+great just the colors a bit light than original<br><br>
+                        <div class="img3"><span>anonymous</span><br>
+                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/C639E3EE-07F7-49D9-8C4F-1D420FC2E63C_140x140.jpg?v=1749078191" alt="realcom" width="50px" height="60px">
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="opt">
+                <button type="button" class="btn3">&lt;</button>
+                <button type="button" class="btn3">&gt;</button>
+            </div>
+            <div class="for">
+                <form>
+                    <label for="email">subscribe to our email</label><br><br>
+                    <input type="email" id="email" class="email" placeholder="email">
+                    <input type="submit" id="sub" class="sub" value="&#8594;">
+                </form>
+            </div>
+            <div class="bingo">© 2025,<a href="#" class="link">FootballshirtsPK</a><a href="#" class="link">Powered by Shopify</a>&nbsp;.&nbsp;
+<a href="#" class="link">Privacy policy</a></div>
+                <div>
+                    <img src="instacon-removebg-preview.png" class="image" id="image3" alt="instaicon" width="20px" height="20px">
+                </div>
+        </div>
+    </body>
+</html>

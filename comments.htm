@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0; 
+        }
+        .flexible {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .comment {
+                padding: 18px;
+                position: relative;
+                overflow: hidden;
+                font-size: 17px;
+                display: inline-block;
+                text-align: center;
+                width: 170px;
+                height: 200px;
+            }
+            .img3 {
+                position: absolute;
+                bottom: 0;
+                left: 83px;
+            }
+            .opt {
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+            .btn3 {
+                margin-left: 10px;
+                color: black;
+                border: none;
+                outline: none;
+                padding: 10px;
+                background-color: transparent;
+            }
+            .btn3:hover {
+                color:rgb(94, 94, 94);
+            }
+            .linear {
+                background: linear-gradient(to right, white, blue);
+                width: 200px;
+                height: 200px;
+                transition:  1s ease;
+            }
+            .linear:hover {
+                background: linear-gradient(to right,white, white);
+            }
+            .gradient-background {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(-45deg, red, white, purple, white);
+            background-size: 400% 400%;
+            animation: gradientShift 2s ease 2;
+            }
+
+            @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+            }
+
+    </style>
+</head>
+<body>
+    <div class="flexible">
+                <div class="comment" id="hidcom1">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>Only the best</b><br>
+Only the best, you will never get this type of quality shirts anywhere but footballshirts PK</span><br><br>
+                        <div class="img3"><span>first</span><br>
+                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/86940F47-D5B2-4C5E-85D2-82D90A975C58_140x140.jpg?v=1748096137" alt="miamicom" width="50px" height="60px">
+                        </div>
+               </div>
+                <div class="comment" id="hidcom2">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>Great</b><br>
+Great quality<br><br><div class="img3"><span>second</span><br>
+                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/83E67D29-99D7-4398-8D54-9EB7DF90C16F_140x140.jpg?v=1748529538" alt="realcom"  width="50px" height="60px">
+                     </div>   
+                    </span>
+                </div>
+                <div class="comment" id="hidcom3">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>great just the colors a bit light than</b><br>
+great just the colors a bit light than original<br><br>
+                        <div class="img3"><span>third</span><br>
+                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/C639E3EE-07F7-49D9-8C4F-1D420FC2E63C_140x140.jpg?v=1749078191" alt="realcom" width="50px" height="60px">
+                        </div>
+                    </span>
+                </div>
+                <div class="comment" id="hidcom4" style="display: none;">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>great just the colors a bit light than</b><br>
+great just the colors a bit light than original<br><br>
+                        <div class="img3"><span>forth</span><br>
+                        <img src="https://footballshirtspk.com/cdn/shop/files/6AB68ABC-C32A-47EC-A9CA-553125C3B06D.jpg?v=1752500580&width=990" alt="realcom" width="50px" height="60px">
+                        </div>
+                    </span>
+                </div>
+                <div class="comment" id="hidcom5" style="display: none;">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>great just the colors a bit light than</b><br>
+great just the colors a bit light than original<br><br>
+                        <div class="img3"><span>fifth</span><br>
+                        <img src="https://footballshirtspk.com/cdn/shop/files/F26B4902-C73E-4A00-89FD-DBC5B770B703.jpg?v=1738701701&width=990" alt="realcom" width="50px" height="60px">
+                        </div>
+                    </span>
+                </div>
+                <div class="comment" id="hidcom6" style="display: none;">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>great just the colors a bit light than</b><br>
+great just the colors a bit light than original<br><br>
+                        <div class="img3"><span>sixth</span><br>
+                        <img src="https://footballshirtspk.com/cdn/shop/files/3223BE46-9C4E-424B-988D-5CCA30FA8A88.jpg?v=1738789389&width=990" alt="realcom" width="50px" height="60px">
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="opt">
+                <button type="button" class="btn3" id="button1">&lt;</button>
+                <button type="button" class="btn3" id="button2">&gt;</button>
+            </div>
+
+            <!-- <script>
+
+                let clickCount = 0;
+                const first = document.getElementById("hidcom1");
+                const sec = document.getElementById("hidcom2");
+                const third = document.getElementById("hidcom3");
+                const forth = document.getElementById("hidcom4");
+                const fifth = document.getElementById("hidcom5");
+                const six = document.getElementById("hidcom6");
+
+                const btn = document.getElementById("button2").addEventListener("click", function() {
+                    clickCount++;
+
+                    switch(clickCount) {
+                        case 1:
+                            forth.style.display = "flex";
+                            first.style.display = "none";
+                            break;
+                        case 2:
+                            fifth.style.display = "flex";
+                            sec.style.display = "none";
+                            break;
+                        case 3:
+                            six.style.display = "flex";
+                            third.style.display = "none";
+                            break;
+                        case 4:
+                            first.style.display = "flex";
+                            sec.style.display = "flex";
+                            third.style.display = "flex";
+                            forth.style.display = "none";
+                            fifth.style.display = "none";
+                            six.style.display = "none";
+                            
+                        default:
+                            break;
+                    }
+                    
+                });
+                
+            </script> -->
+            <div class="linear">
+                some context
+            </div>
+            <div class="gradient-background"></div>
+
+        </body>
+</html>

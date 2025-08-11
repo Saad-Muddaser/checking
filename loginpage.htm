@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <style>
+            
+            body {
+                background-size: cover;
+                background-repeat: repeat;
+                text-transform: capitalize;
+                color: white;
+                font-family: "Roboto";
+            }
+            .div1 {
+                margin: auto;
+                width:440px ;
+                background-color: rgba(255, 255, 255, 0.1);
+                -webkit-backdrop-filter: blur(1px);
+                backdrop-filter: blur(1px);
+                cursor: pointer;
+                transition: box shadow 0.4s ease-in-out;
+            }
+            .div1:hover {
+                box-shadow: 0px 0px 40px 20px rgba(68, 33, 33, 0.7);
+            }
+            .div2 {
+                border-radius: 3px;
+                background-color: rgba(0, 0, 0, 0.177);
+                border: 0.2px solid rgba(163, 163, 163, 0.659);
+                box-shadow: 1px 1px 0px 2px rgba(245, 245, 245, 0.344), 1px 2px 0px 0px rgba(255, 254, 254, 0.442);
+                width: 400px;
+                height: 350px;
+                padding: 15px;
+                text-align: center;
+                margin: auto;
+                margin-top: 200px;
+            }
+            input[type=email], input[type=password] {
+                width: 90%;
+                border: none;
+                border-bottom: 2px solid white;
+                background-color: transparent;
+                color:rgba(237, 237, 237, 0.867) ;
+                margin: 10px;
+            }
+            Input[type=email]:focus {
+                outline: none;
+                border-bottom-color: white;
+            }
+            Input[type=password]:focus {
+                outline: none;
+                border-bottom-color: white;
+            }
+            .label {
+                float: left;
+                margin-left: 15px;
+            }
+            input[type=checkbox] {
+                margin-left: 15px;
+                float: left;
+                width: 15px;
+                height: 15px;
+                accent-color: black;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+            .label2 {
+                float: left;
+                margin-top: 2px;
+            }
+            #a1 {
+                float: right;
+                text-decoration: underline;
+                color: rgba(237, 237, 237, 0.867);
+            }
+            #a2 {
+                text-decoration: underline;
+                color: rgba(237, 237, 237, 0.867);
+            }
+            input[type=button] {
+                font-weight: bold;
+                text-align: center;
+                border-radius: 3px;
+                border: none;
+                outline: none;
+                width: 90%;
+                background-color: rgba(237, 237, 237, 0.867);
+                color: black;
+                padding: 14px 45px;
+            }
+            input[type=button]:hover {
+                background-color: rgb(237, 237, 237);
+            }
+            .glow-button {
+                /* Basic button styling */
+                padding: 15px 30px;
+                background-color: #333;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the glow */
+            }
+
+            .glow-button:hover {
+                 box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Cyan glow */
+            }
+        </style>
+    </head>
+    <body style="background-image: url('mountain2.jpg');">
+        <div class="div1">
+        <div class="div2">
+            <h1>WELCOME</h1>
+            <form>
+                <label for="email" class="label">enter your email</label><br>
+                <Input type="email" name="email" id="email" ><br>
+                <label for="password" class="label">enter your password</label><br>
+                <input type="password" name="password" id="password" ><br><br>
+                <input type="checkbox" name="remember" id="remember" value="remember me">
+                <label for="remember" class="label2">Remember Me</label>
+                <a href="#" id="a1">forget password?</a><br><br>
+                <input type="button" value="log in"><br><br>
+                <span>Don't have an account? &nbsp;</span><a href="#" id="a2">register</a> 
+            </form>
+        </div>
+        </div>
+        <!-- <button class="glow-button">Glow Button</button> -->
+    </body>
+</html>

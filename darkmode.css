@@ -1,0 +1,69 @@
+body.dark-mode #buttondark {
+                background-color: white;
+                color: white;
+            }
+            body.dark-mode {
+                background-color: black;
+            }
+            body.dark-mode .btn{
+                background-color: rgb(0, 0, 0);
+                color: white;
+            }
+            body.dark-mode .div2{
+                background-color: rgb(21, 21, 21);
+                color: white;
+            }
+            body.dark-mode .div5 {
+                background-color: rgb(21, 21, 21);
+            }
+            body.dark-mode .div5 a {
+                color: white;
+            }
+            body.dark-mode .div4 {
+                content: url("logo-removebg-preview.png");
+                width: 100px;height: 60px;
+                margin-top: 23px;
+                margin-left: 185px;
+                float: left;
+            }
+            body.dark-mode .div6 {
+                background-color: black;
+            }
+            body.dark-mode #image-1 {
+                content: url("searchwhite-removebg-preview.png");
+            }
+            body.dark-mode #image-2 {
+                content: url("accountwhite3-removebg-preview.png");
+                width: 45px;height: 50px;
+                margin-right: 0px;
+                margin-left: 0;
+            }
+            body.dark-mode #image-3 {
+                content: url("cartwhite-removebg-preview.png");
+                
+            }
+            body.dark-mode .div7 {
+                background-color: black;
+                color: white;
+            }
+            body.dark-mode .size {
+                color: white;
+            }
+            body.dark-mode .under {
+                color: white;
+            }
+            body.dark-mode .div8 {
+                background-color: rgb(21, 21, 21);
+                color: white;
+            }
+            body.dark-mode .bingo {
+                color: rgb(115,115,115);
+            }
+            body.dark-mode #image3 {
+                content: url("instawhite-removebg-preview.png");
+                height: 40px;
+            }
+            body.dark-mode #para {
+                color: white;
+            }
+            
