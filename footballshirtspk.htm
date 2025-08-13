@@ -6,6 +6,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <link rel="stylesheet" href="darkmode.css">
+        <script src="footballshirts.js"></script>
         <title>FootballshirtsPK</title>
         <style>
             
@@ -35,23 +36,29 @@
             
             .main {
                 box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 font-size: 16px;
                 color: rgb(32, 32, 32);
-                margin-left: 185px;
+                
                 margin-top: 9px;
                 letter-spacing: 1.4px;
             }
             .div2 {
                 text-align: center;
-                float: left;
+                
                 background-color: rgb(255, 255, 255);
                 width: 1100px;
 
             }
             .div4 {
                 margin-top: 23px;
-                margin-left: 185px;
+                /* margin-left: 185px; */
                 float: left;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             .btn {
                 border: none;
@@ -62,15 +69,25 @@
             .btn:hover {
                 color:rgb(94, 94, 94);
             }
+            .nav-div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 0px;
+            }
             .div5 {
                 letter-spacing: 1.3px;
+                word-spacing:2px;
                 background-color: rgb(255, 255, 255);
                 padding: 20px 25px;
                 margin-left: 20px;
                 float: left;
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
                 width: 800px;
                 flex-wrap: wrap;
+                gap: 2px;
             }
             
             .div5 a {
@@ -94,7 +111,7 @@
                 align-items: center;
                 padding: 10px;
                 margin-top:40px ;
-                margin-left: 5px;
+                /* margin-left: 5px; */
                 background-color: rgb(255, 255, 255);
             }
             .image {
@@ -108,19 +125,22 @@
                 transform: scale(1.2);
             }
             .image2 {
-                width: 100%;
+                max-width: 100%;
                 height: auto;
                 background-repeat: no-repeat;
                 background-size: cover;
-                z-index: 1;
+                z-index: 5;
             }
+            
             .div7 {
                 letter-spacing: 1.2px;
                 box-sizing: border-box;
-                margin-left: 195px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 font-size: medium;
                 background-color: rgb(255, 255, 255);
-                display: flex;
                 text-align: left;
                 padding: 5px;
             }
@@ -206,13 +226,18 @@
             .hov:hover {
                 transform: scale(1.05);
             }
+            .btn2-div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
             .btn2 {
                 background-color: black;
                 color: white;
                 width: 100px;
                 height: 40px;
                 margin: 5px;
-                margin-left: 700px;
                 transition:border .02s;
             }
             .btn2:hover {
@@ -230,7 +255,37 @@
                 width: 100%;
                 height: 600px;
             }
+            .flexible {
+            overflow: hidden;
+            position: relative;
+            width: 80%;
+        
+            margin: auto;
+            
+            }
+            .in-flex {
+                transition: 0.5s linear;
+                display: flex;
+                width: 100%;
+                
+            }
             .comment {
+                padding: 18px;
+                    
+                font-size: 17px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                text-align: center;
+                min-width: 31%;
+                height: 200px;
+            }
+            .opt {
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+            /* .comment {
                 padding: 18px;
                 position: relative;
                 overflow: hidden;
@@ -238,11 +293,11 @@
                 display: inline-block;
                 width: 170px;
                 height: 200px;
-            }
+            } */
             .img3 {
                 position: absolute;
                 bottom: 0;
-                left: 83px;
+                left: 180px;
             }
             .btn3 {
                 margin-left: 10px;
@@ -325,36 +380,81 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+            .nav {
+                display: none;
+                margin-top: 30px;
+            }
+            #span-1 {
+                font-size: 20px
+            }
+            @media screen and (max-width:1000px) {
+                body {
+                    width: 100%;
+                    font-size: 10px;
+                }
+                .nav {
+                    display: block;
+                }
+                .div7{
+                    overflow: hidden;
+                    flex-wrap: wrap;
+                }
+                .hov {
+                    width:315px ;height: 395px;
+                    transform: scale(1);
+                }
+                .div5 {
+                    display: none;
+                }
+                .div4 {
+                    padding: 2px;
+                    width: 50%;
+                    padding-left: 135px;
+                    margin-left: 0px;
+                }
+                /* .image-logo {
+                    width: 200px;
+                } */
+                 .div6 {
+                    width: 150px;
+                    float: right;
+                 }
+                .under {font-size:12px ;}
+                .size {font-size:12px ;}
+                .div8 {
+                    max-width: 100%;
+                    font-size: 10px;
+                }
+                .for {
+                    left: 15px;
+                }
+                #image3 {
+                    right: 15px;
+                    bottom:-145 ;
+                }
+                /* #span-1 {
+                    font-size: 8px;
+                }
+                .com-div {
+                    max-width:300px ;
+                    font-size: 8px;
+                }
+                .comment  {
+                   font-size: 8px;
+                }
+                .com-img {
+                    margin-top: 6px;
+                    width: 25px;height: 30px;
+                    position: relative;
+                    bottom: 0px;
+                    left: 10px;
+                } */
+
+            }
         </style>
     </head>
     <body id="body">
-        <script>
-            function darkMode() {
-                const body = document.getElementById("body");
-                body.classList.toggle("dark-mode")
-            }
-            </script>
-            <script>            
-                document.addEventListener("DOMContentLoaded", function () { // domcontentloaded means that it covers whole webpage
-                const sections = document.querySelectorAll("div, #image2");//query is like getelementbyid but it covers more like classes and ids etc
-
-                const observer = new IntersectionObserver((entries, observer) => {//intersectionobserver checks whether a div or anything enters a viewport
-                    entries.forEach(entry => {// foreach starts a loop for entry
-                    if (entry.isIntersecting) {//isintersecting works under intersectionobserver. it checks that is this element viewed or not
-                        entry.target.classList.add("visible");//entry.taregt checks which element is being observed at the time
-                        observer.unobserve(entry.target);
-                    }
-                    });
-                }, {
-                    threshold: 0.11//it checks if the 10% of the area is covered over scrolling than it will show the div
-                });
-                
-                sections.forEach(section => {
-                    observer.observe(section);// .observe means it tells the observer variable to look it/track it
-                });
-                });
     
-        </script>
         <div class="main">
             <div class="div1" style="float: left;">
                 <button type="button" class="btn" onclick="myfunc2()">&lt;</button>
@@ -366,19 +466,13 @@
                 <button type="button" class="btn" onclick="myfunc()">&gt;</button>
             </div>
         </div>
-             <script>
-                function myfunc() {
-                    document.getElementById("demo").innerHTML= "Free Shipping On Rs.5,000 Or Above!";
-                }
-                function myfunc2() {
-                    document.getElementById("demo").innerHTML= "Cash On Delivery - All Over Pakistan!";
-                }
-                function myfunc3() {
-                    document.getElementById("demo").innerHTML= "14-Days Easy Return And Exchange Policy!";
-                }
-            </script>
+            
+        <div class="nav-div">
+            <div class="nav">
+                <a href="#"><img src="nav-removebg-preview.png" alt="nav" width="50px" height="60px" class="hid-nav"></a>
+            </div>
             <div class="div4">
-                <img src="logo.jpg" alt="logo" width="100px" height="60px">
+                <img src="logo.jpg" alt="logo" class="image-logo" width="100px" height="60px">
             </div>
             <div class="div5">
                 <a href="footballshirtspk.htm" id="hm">home</a>
@@ -401,9 +495,12 @@
                 <a href="loginpk.htm"><img src="account2-removebg-preview.png" alt="search" class="image" id="image-2" width="32px" height="32px" style="margin-right: 20px;"></a>
                 <a href="addtocart.htm"><img src="cart-removebg-preview.png" alt="search" class="image" id="image-3" width="25px" height="25px"></a>
             </div>
-            <button type="button" onclick="darkMode()" id="buttondark" class="buttondark">x</button>
+            <!-- <button type="button" onclick="darkMode()" id="buttondark" class="buttondark">x</button> -->
+        </div>
+        
             <img src="homepageimg.jpg" alt="home page image" class="image2" id="image2">
-            <p style="margin-left: 205px;letter-spacing: 1.4px;font-size: 25px;" id="para">new arrivals</p>
+            <p style="margin-left: 220px;letter-spacing: 1.4px;font-size: 25px;" id="para">new arrivals</p>
+        <div class="main-div7">
             <div class="div7">
                 <div class="div-img">
                     <a href="player3.htm" target="_self">
@@ -562,42 +659,82 @@
                     <p class="size">from RS.5,999.00 PKR</p>
                 </div>
             </div>
-            
+        </div> 
+        <div class="btn2-div">
         <button class="btn2" type="button">View all</button>
+    </div>
         <div class="div8">
             <span style="margin-top: 15px;padding-top:15px ;font-family: Arial, Helvetica, sans-serif;">let customers speak for us</span><br>
             <span>&#9733 &#9733 &#9733 &#9733 &#9733</span><br>
-            <span style="font-weight: lighter;font-size: 20px;color: rgb(41, 41, 41);">from 68 reviews</span>
-            <div>
-                <div class="comment">
+            <span style="font-weight: lighter;;color: rgb(41, 41, 41);" id="span-1">from 68 reviews</span>
+            <div class="flexible">
+            <div class="in-flex" id="in-flex">
+                <div class="comment" id="hidcom1">
                     <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
                         <b>Only the best</b><br>
-Only the best, you will never get this type of quality shirts anywhere but footballshirts PK</span><br><br>
+Only the best, you will never get this type<br> of quality shirts anywhere but footballshirts PK</span><br><br>
                         <div class="img3"><span>ali raza</span><br>
-                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/86940F47-D5B2-4C5E-85D2-82D90A975C58_140x140.jpg?v=1748096137" alt="miamicom" width="50px" height="60px">
+                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/86940F47-D5B2-4C5E-85D2-82D90A975C58_140x140.jpg?v=1748096137" class="com-img" alt="miamicom" width="50px" height="60px">
                         </div>
                </div>
-                <div class="comment">
+                <div class="comment" id="hidcom2">
                     <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
                         <b>Great</b><br>
 Great quality<br><br><div class="img3"><span>hashir</span><br>
-                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/83E67D29-99D7-4398-8D54-9EB7DF90C16F_140x140.jpg?v=1748529538" alt="realcom"  width="50px" height="60px">
+                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/83E67D29-99D7-4398-8D54-9EB7DF90C16F_140x140.jpg?v=1748529538" class="com-img" alt="realcom"  width="50px" height="60px">
                      </div>   
                     </span>
                 </div>
-                <div class="comment">
+                <div class="comment" id="hidcom3">
                     <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
                         <b>great just the colors a bit light than</b><br>
 great just the colors a bit light than original<br><br>
                         <div class="img3"><span>anonymous</span><br>
-                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/C639E3EE-07F7-49D9-8C4F-1D420FC2E63C_140x140.jpg?v=1749078191" alt="realcom" width="50px" height="60px">
+                        <img src="https://cdn.shopify.com/s/files/1/0595/0790/0475/files/C639E3EE-07F7-49D9-8C4F-1D420FC2E63C_140x140.jpg?v=1749078191" class="com-img" alt="realcom" width="50px" height="60px">
+                        </div>
+                    </span>
+                </div>
+                <div class="comment" id="hidcom4" >
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>great just the colors a bit light than</b><br>
+great just the colors a bit light than original<br><br>
+                        <div class="img3"><span>hamza</span><br>
+                        <img src="https://footballshirtspk.com/cdn/shop/files/6AB68ABC-C32A-47EC-A9CA-553125C3B06D.jpg?v=1752500580&width=990" alt="realcom" width="50px" height="60px">
+                        </div>
+                    </span>
+                </div>
+                <div class="comment" id="hidcom5" >
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>great just the colors a bit light than</b><br>
+great just the colors a bit light than original<br><br>
+                        <div class="img3"><span>asher</span><br>
+                        <img src="https://footballshirtspk.com/cdn/shop/files/F26B4902-C73E-4A00-89FD-DBC5B770B703.jpg?v=1738701701&width=990" alt="realcom" width="50px" height="60px">
+                        </div>
+                    </span>
+                </div>
+                <div class="comment" id="hidcom6">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>great just the colors a bit light than</b><br>
+great just the colors a bit light than original<br><br>
+                        <div class="img3"><span>fatima</span><br>
+                        <img src="https://footballshirtspk.com/cdn/shop/files/3223BE46-9C4E-424B-988D-5CCA30FA8A88.jpg?v=1738789389&width=990" alt="realcom" width="50px" height="60px">
+                        </div>
+                    </span>
+                </div>
+                <div class="comment" id="hidcom7">
+                    <span>&#9733 &#9733 &#9733 &#9733 &#9733<br>
+                        <b>great just the colors a bit light than</b><br>
+great just the colors a bit light than original<br><br>
+                        <div class="img3"><span>fatima</span><br>
+                        <img src="https://footballshirtspk.com/cdn/shop/files/3223BE46-9C4E-424B-988D-5CCA30FA8A88.jpg?v=1738789389&width=990" alt="realcom" width="50px" height="60px">
                         </div>
                     </span>
                 </div>
             </div>
+            </div>
             <div class="opt">
-                <button type="button" class="btn3">&lt;</button>
-                <button type="button" class="btn3">&gt;</button>
+                <button class="btn3" onclick="prevSlide()">&lt;</button>
+                <button  class="btn3" onclick="nextSlide();lastSlide()">&gt;</button>
             </div>
             <div class="for">
                 <form>
