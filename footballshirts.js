@@ -81,3 +81,33 @@
                     //     }, 3000);
                     // }
                 }, 30000);
+
+                //for open and close popups on screen
+                 function showPopup() {
+                    document.getElementById("popupModal").style.display = "flex";
+                }
+
+                function closePopup() {
+                    document.getElementById("popupModal").style.display = "none";
+                }
+
+                //multiple focuses in multiple divs 
+                function setupButtonGroup(groupId) {
+                const group = document.getElementById(groupId);
+                const buttons = group.querySelectorAll('button');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                    // Remove focus class from all in this group
+                    buttons.forEach(btn => btn.classList.remove('focused'));
+                    // Add to clicked button
+                    button.classList.add('focused');
+                    });
+                });
+                }
+
+                // Setup both groups
+                setupButtonGroup('group1');
+                setupButtonGroup('group2');
+                setupButtonGroup('group3');
+            
