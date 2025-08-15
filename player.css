@@ -109,6 +109,16 @@
                 font-size: 17px;
                 letter-spacing: 1.4px;
             }
+            #divSoldout {
+                background-color: black;
+                color: white;
+                opacity: 0.9;
+                padding: 2px 4px;
+                border-radius: 20px;
+                width: fit-content;
+                font-size: 10px;
+                
+            }
             .btn4 {
                padding: 10px 20px;
                border: 1px solid rgb(94, 94, 94);
@@ -120,11 +130,7 @@
             .btn4:hover {
                 border-color: black;
             }
-            .btn4:focus {
-                border: 1px solid black;
-                background-color: black;
-                color: white;
-            }
+            
             .btn5 {
                opacity: 0.8;
                padding: 10px 20px;
@@ -134,11 +140,7 @@
                color: black;
                background-color: white;
             }
-            .btn5:focus {
-                border: 1px solid black;
-                background-color: black;
-                color: white;
-            }
+            
             .btnhi {
                 padding: 10px 20px;
                border: 1px solid rgb(94, 94, 94);
@@ -150,11 +152,7 @@
             .btnhi:hover {
                 border-color: black;
             }
-            .btnhi:focus {
-                border: 1px solid black;
-                background-color: black;
-                color: white;
-            }
+            
             .btnby {
                 padding: 10px 20px;
                border: 1px solid rgb(94, 94, 94);
@@ -166,11 +164,7 @@
             .btnby:hover {
                 border-color: black;
             }
-            .btnby:focus {
-                border: 1px solid black;
-                background-color: black;
-                color: white;
-            }
+            
             .btnch {
                opacity: 0.8;
                padding: 10px 20px;
@@ -180,11 +174,11 @@
                color: black;
                background-color: white;
             }
-            .btnch:focus {
-                border: 1px solid black;
+            .focused {
                 background-color: black;
                 color: white;
             }
+            
             .txt {
                 width: 70px;
                 color: black;

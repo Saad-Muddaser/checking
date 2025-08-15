@@ -110,4 +110,47 @@
                 setupButtonGroup('group1');
                 setupButtonGroup('group2');
                 setupButtonGroup('group3');
-            
+                
+                //increases a value inside input text
+                function increaseInputValue() {
+                        const input = document.getElementById("score");
+                        let currVal = parseFloat(input.value);//it increases the number in inputs value
+                        if (isNaN(currVal)) {// checks if the inputs value is a number or not
+                            currVal = 1;
+                        }
+                        // if (currVal === 10) {// if placed here than it goes to 10 than places 1
+                        //     currVal = 0;
+                        // }
+                        currVal += 1;
+                        if (currVal === 10) {//if placed here than it goes to 9 than places 0
+                            currVal = 1;
+                        }
+                        input.value = currVal;
+
+                    }
+                    function decreaseInputValue() {
+                        const input = document.getElementById("score");
+                        let currVal = parseFloat(input.value);//it increases the number in inputs value
+                        if (isNaN(currVal)) {// checks if the inputs value is a number or not
+                            currVal = 1;
+                        }
+                        
+                        currVal -= 1;
+                        if (currVal === 0) {//if placed here than it goes to 9 than places 0
+                            currVal = 1;
+                        }
+                        input.value = currVal;
+
+                    }
+                
+                    //increases the value inside any html tag
+                function increaseScore() {
+                        const score = document.getElementById('score');
+                        let value1 = parseInt(score.textContent);//parseInt & parseFloat converts strings to numbers both ingore non-numeric values after the number
+                        //but if any word is present before the number then it gives isNan parseFloat also includes decimal
+                        value1 += 1;
+                        score.textContent = value1;//textcontent adds the vlaue to score
+                        if (value1 === 10) {
+                            score.textContent = 1;// if value = 10 then back to 1
+                        }
+                    }
