@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+QLD:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>shoelace</title>
+    <link rel="icon" type="image/icon" href="https://templatekit.jegtheme.com/shoelace/wp-content/uploads/sites/191/2021/10/shoe-logo-new@2x.png">
+    <style>
+        body {
+            background-image: url("graybg.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            
+        }
+        * {
+             font-family: "Roboto", sans-serif;
+             margin: 0;
+             padding: 0;
+        }
+        .div-navi {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .links {
+            text-align: center;
+            text-decoration: none;
+            color: gray;
+            padding: 12px; 
+            
+            margin: 10px;
+            transition: color 0.3s;
+        }
+        .links:hover {
+            color: rgb(233, 201, 21);
+        }
+        #fix {
+            color: rgb(233, 201, 21);
+        }
+        .navigation-bar {
+            display: none;
+            position: absolute;
+            top: 10px;
+            z-index: 2;
+            box-shadow: 2px 2px 3px rgba(56, 56, 56, 0.321),-2px -2px 3px rgba(56, 56, 56, 0.321);
+        }
+        ul {
+            list-style: none;
+        }
+        .links2 {
+            color:gray ;
+            display: block;
+            padding: 6px 12px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .links2:hover {
+            color: rgb(233, 201, 21);
+        }
+        #hidden-div:hover .navigation-bar {
+            display: flex;
+        }
+        .btn2 {
+            padding: 18px;
+                background-color: rgb(233, 201, 21);
+                color: white;
+                width: 150px;
+                text-align: center;
+                border: none;
+                border-radius: 3px;
+                outline: none;
+                font-size: 16px;
+                position: absolute;
+                right: 130px;
+        }
+            .shoe-main {
+                 display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 100px;
+                width: 100%;
+            }
+            .blue-div {
+                background-color: rgb(32, 159, 249);
+                width: 1200px;
+                height: 580px;
+                position: relative;
+                z-index: -1;
+                border-radius: 6px;
+            }
+            #red-div {
+                background-color: red;
+            }
+            .div {
+                opacity: 0;
+                transform: translateY(200px);
+                transition: opacity 1s ease-in, transform 1s ease-out;
+                will-change: opacity, transform;
+                
+                position: absolute;
+                z-index: 2;
+            }
+            .visible {
+                opacity: 1;
+                transform: translateY(-60px);
+                overflow: hidden;
+            }
+            .div-img-center {
+                display: block;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                
+            }
+            .div-img {
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                width: 100%;
+            }
+            .div-head {
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            h1 {
+                font-size: 50px;
+                font-weight: 600;
+            }
+            .head {
+                opacity: 0;
+                transform: translateY(200px);
+                transition: opacity 1s ease-in, transform 1s ease-out;
+                will-change: opacity, transform;
+                
+            }
+            .headvis {
+                opacity: 1;
+                transform: translateY(0px);
+                /* overflow: hidden; */
+            }
+            .btn1 {
+                opacity: 0;
+                transform: translateX(-200px);
+                transition: opacity 1s ease-in, transform 1s ease-out;
+                will-change: opacity, transform;
+                padding: 18px;
+                background-color: rgb(233, 201, 21);
+                color: white;
+                width: 150px;
+                margin-right: 10px;
+                text-align: center;
+                border: none;
+                border-radius: 3px;
+                outline: none;
+                font-size: 16px;
+                
+            }
+            .btn1:hover {
+                transform: translateY(-10px);
+            }
+            .btnvis {
+                opacity: 1;
+                transform: translateX(0px);
+                overflow: hidden;
+            }
+            #img1 {
+                animation: box 2s linear 3s 4 alternate;
+                transition: 1s all;
+                border-radius: 50%;
+                margin-left: 10px;
+            }
+            @keyframes box  {
+                0% {box-shadow: 10px 10px 15px 5px rgba(250, 204, 0, 0.649), -10px -10px 15px 5px rgba(250, 204, 0, 0.518);}
+                50% {box-shadow: 10px 10px 15px 5px rgba(250, 204, 0, 0.463), -10px -10px 15px 5px rgba(250, 204, 0, 0.353);}
+
+                100% {box-shadow: 5px 5px 10px rgba(250, 204, 0, 0), -5px -5px 10px rgba(250, 204, 0, 0);}
+
+            }
+            .img1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                opacity: 0;
+                transform: translateX(200px);
+                transition: opacity 1s ease-in, transform 1s ease-out;
+                will-change: opacity, transform;
+            }
+            .playvis {
+                opacity: 1;
+                transform: translateX(0px);
+                overflow: hidden;
+            }
+            .div1 {
+                height: 190px;width: 285px;
+                margin-top: 20px;
+                text-align: center;
+                /* margin: 10px; */
+                border-radius: 10px;
+                border: 1px solid gray;
+                /* padding: 4px; */
+                padding-top: 20px;
+                
+            }
+            .div1 h4 {
+                font-size: 40px;
+                color: rgb(233, 201, 21);
+            }
+            .div1 p {
+                color: black;
+                font-size: large;
+                font-weight: bold;
+                font-size: 19px;
+            }
+            .div1 span {
+                color: gray;
+                font-size: 17px;
+            }
+            #div1 {
+                background-color: rgb(32, 159, 249);
+            }
+            #div1 h4 {
+                color: white;
+            }
+            #div1 span {
+                color: white;
+            }
+            .div1:hover {
+                background-color: rgba(242, 242, 242, 0.767);
+            }
+            .div-img-inside {
+                display: block;
+                width: 287px;height: 240px;
+                overflow: hidden;
+                box-sizing: border-box;
+                margin: 10px;
+                position: relative;
+                opacity: 0;
+                transform: translateY(200px);
+                transition: opacity 1s ease-in, transform 1s ease-out;
+                will-change: opacity, transform;
+                
+            }
+            .div-char {
+                background-color: aquamarine;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                padding-bottom: 15px;
+                position: absolute;
+                top: 0px;left: 20px;
+                border-radius: 10px;
+                background-color: rgb(0, 0, 0);
+                
+            }
+            .span-char {
+                font-size: 25px;
+            }
+            
+            .chardiv-vis {
+                opacity: 1;
+                transform: translateY(0px);
+                overflow: hidden;
+            }
+            #div-img {
+                text-align: left;
+                margin-top: 100px;
+                width: 100%;
+            }
+            .divofuncle {
+                border-radius: 1opx;
+            }
+            .divofhover {
+                margin-left: 100px;
+                height: 500px;width: 650px;
+                color: gray;
+                position: relative;
+                
+            }
+            .divimg-hover {
+                opacity: 0;
+                transform: translateX(300px);
+                transition: opacity 1s ease-in, transform 1s ease-out;
+                will-change: opacity, transform;
+                
+                position: absolute;
+                right: 30px;
+                bottom: 80px;
+            }
+            
+            .divimghovervis {
+                opacity: 1;
+                transform: translateX(0px);
+                overflow: hidden;
+            }
+            .otherbtn {
+                /* opacity: 0; */
+                transform: translateX(-200px);
+                transition: opacity 1s ease-in, transform 1s ease-out;
+                will-change: opacity, transform;
+                padding: 18px;
+                background-color: rgb(255, 255, 255);
+                color: rgb(32, 159, 249);
+                width: 150px;
+                margin: 10px;
+                text-align: center;
+                border: 2px solid rgb(32, 159, 249);
+                border-radius: 8px;
+                outline: none;
+                font-size: 16px;
+            }
+            .otherbtn:hover {
+                transform: translateY(-10px);
+            }
+            .othervis {
+                opacity: 1;
+                transform: translateX(0px);
+                overflow: hidden;
+            }
+            li {
+                line-height: 1.7;
+            }
+            .maincounterdiv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+                position: relative;
+                height:730px ;
+            }
+            #bluediv2 {
+                height: 450px;
+                margin-top: 60px;
+                background-color: rgb(10, 126, 209);
+                padding-bottom: 50px;
+                box-sizing: border-box;
+            }
+            .bluedivcon {
+                text-align: left;
+                width: 70%;
+            }
+            .counterdiv { 
+                text-align: center;               
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80%;height: 220px;
+                position: absolute;
+                bottom: 0px;
+                box-shadow: 3px 3px 10px 2px rgba(137, 136, 128, 0.499),-2px -2px 8px 2px rgba(72, 72, 72, 0.23);
+                background-color: white;
+                opacity: 0;
+                transform: translateY(200px);
+                transition: opacity 1s ease-in, transform 1s ease-out;
+                will-change: opacity, transform;              
+            }
+            .counterdivvis {
+                opacity: 1;
+                transform: translateY(0px);
+                overflow: hidden;
+            }
+            .upperdiv {
+                margin: 30px;
+                width: 20%;
+                line-height: 1.5;
+            }
+            .div-block {
+                margin-top: 100px;
+                line-height: 1.5;
+                display: block;
+                align-items: center;
+                justify-content: center;
+            }
+            .shoeimg1 {
+                position: relative;
+                box-sizing: border-box;
+                margin: 10px;
+                border-radius: 10px;
+            }
+            .in-shoe {
+                position: absolute;
+                transition: 0.4s linear;
+                bottom: 3px;
+                padding: 30px;
+                width: 340px;height: 200px;
+                background-color: rgba(0, 0, 0, 0.2);
+                line-height: 1.5;
+                z-index: 2;
+            }
+            .in-shoe a {
+                text-decoration: none;
+                color: rgb(173, 147, 4);
+                transition: 0.4s linear
+            }
+            .in-shoe:hover {
+                background-color: rgb(10, 126, 209);
+            }
+            .in-shoe:hover a {
+                color: white;
+            }
+            span {
+                color: gray;
+                
+            }
+            .afford {
+                width: 40%;
+                text-align: left;
+            }
+            .price1 {
+                padding: 10px;
+                width: 35%;
+                display: flex;
+                /* justify-content: center;
+                align-items: center; */
+                box-shadow: 5px 5px 10px rgba(150, 150, 150, 0.2),-5px -5px 10px rgba(151, 151, 151, 0.2);
+            }
+            .in-price {
+                line-height: 1.5;
+                padding: 35px;
+                padding-right: 60px;
+                margin-left: 20px;
+                border-right: 1px groove rgba(128, 128, 128, 0.471);
+                text-align: center;
+            }
+            .in-price h1 {
+                color: rgb(233, 201, 21);
+            }
+            .price1 ul {
+                text-align: left;
+                font-weight: 800;
+            }
+            .price1 li {
+                margin: 6px;
+                margin-top: 8px;
+                margin-left: 45px;
+            }
+    </style>
+</head>
+<body>
+    <div class="div-navi">
+        <div style="position: absolute;left: 130px;">
+        <img src="https://templatekit.jegtheme.com/shoelace/wp-content/uploads/sites/191/2021/10/shoe-logo-new@2x.png" width="140px" height="45px" >
+        </div>
+        <a href="#" class="links" id="fix">Home</a>
+        <a href="#" class="links">About us</a>
+        <a href="#" class="links">Services</a>
+        <a href="#" class="links" id="hidden-div">Page &#128899</a>
+        <div class="navigation-bar">
+            <ul>
+                <li><a href="#" class="links2">Team</a></li>
+                <li><a href="#" class="links2">News</a></li>
+                <li><a href="#" class="links2">Single Post</a></li>
+                <li><a href="#" class="links2">FAQ</a></li>
+                <li><a href="#" class="links2">404 Page</a></li>
+            </ul>
+        </div>
+        <a href="#" class="links">Contact us</a>
+        <button class="btn2">Contact us</button>
+    </div>    
+    <diV class="div-img-center" style="margin-top: 60px;">
+        <div class="div-head"> 
+            <h1 class="head">Keeping Your Favorite Shoes<br> in The Best Performance</h1>
+        </div>
+        <div class="div-img">
+           
+            <button class="btn1" id="btn1">Get Started</button>
+            <div class="img1">
+                <img src="playbtn-removebg-preview.png" width="80px" height="80px" id="img1"><span>&nbsp;&nbsp;Watch Intro</span>
+            </div>
+        </div>
+    </diV>    
+    <div class="shoe-main">
+        <div class="div">               
+                <img src="https://templatekit.jegtheme.com/shoelace/wp-content/uploads/sites/191/2021/10/izzy-gibson-ut-qKclcmBI-1.png" width="540px" height="620px">
+        </div>
+        <div class="blue-div"></div> 
+    </div>
+    <div class="div-img" style="text-align: left;padding-top: 60px;">
+        <div class="heading" style="width: 40%;margin-left: 10px">
+            <p style="color: rgb(32, 159, 249);font-weight: bolder;">our process</p>
+            <h1 style="font-size: 45px;">Stay at Home, We Make it<br> Done for you.</h1>
+        </div>
+        <div class="para" style="width: 40%;">
+            <p style="color: gray;">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec<br> ullamcorper mattis, pulvinar dapibus leo.</p>
+        </div>
+    </div>
+    <div class="div-img" style="padding-top: 60px;">
+        <div class="div-img-inside">
+            <div class="div-char" style="background-color: rgb(233, 201, 21);">
+                <span class="span-char" id="span-char" >&#128222</span>
+            </div>
+            <div class="div1" id="div1">
+                <h4 class="h4">01</h4>
+                <p >contact for order</p>
+                <span>Lorem Ipsum is simply<br> dummy text of the printing<br> and typesetting industry.</span>
+            </div>
+        </div>
+        <div class="div-img-inside">
+            <div class="div-char">
+                <span class="span-char">&#128666</span>
+            </div>
+            <div class="div1">
+                <h4  class="h4">02</h4>
+                <p >pickup for order</p>
+                <span>Lorem Ipsum is simply<br> dummy text of the printing<br> and typesetting industry.</span>
+            </div>
+        </div>
+        <div class="div-img-inside">
+            <div class="div-char">
+                <span class="span-char">&#128079</span>
+            </div>
+            <div class="div1">
+                <h4 class="h4">03</h4>
+                <p >clean your shoes</p>
+                <span>Lorem Ipsum is simply<br> dummy text of the printing<br> and typesetting industry.</span>
+            </div>
+        </div>
+        <div class="div-img-inside">
+            <div class="div-char">
+                <span class="span-char">&#128666</span>
+            </div>
+            <div class="div1">
+                <h4  class="h4">04</h4>
+                <p >delivery for you</p>
+                <span>Lorem Ipsum is simply<br> dummy text of the printing<br> and typesetting industry.</span>
+            </div>
+        </div>
+    </div>
+    <div class="div-img" id="div-img">
+        <div class="divofuncle">
+            <img src="https://templatekit.jegtheme.com/shoelace/wp-content/uploads/sites/191/2021/10/handsome-young-man-in-yellow-hoodie-with-white-PNM2AEH.jpg" width="450px" height="500px" class="divimg-uncle">
+        </div>
+        <div class="divofhover">
+            <p style="color: rgb(32, 159, 249);padding: 5px;font-weight: bolder;">About Us</p>
+            <h1 style="font-size: 45px;color: black;padding-bottom: 10px;">Stay at Home, We Make it<br> Done for you.</h1>
+            <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula<br>
+                 eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient<br>
+                 montes, nascetur ridiculus mus.</span><br><br>
+            <span>Lorem ipsum dolor sit amet, consectet<br> adipiscing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore</span><br><br>
+            <div class="divimg-hover">
+                <img src="https://templatekit.jegtheme.com/shoelace/wp-content/uploads/sites/191/2021/10/unrecognizable-girl-in-white-sneakers-on-trendy-yellow-striped-background.jpg" width="260px" height="200px" >
+            </div>
+            <ul>
+                <li>&#10003;&nbsp;&nbsp;Quick Repair Process</li>
+                <li>&#10003;&nbsp;&nbsp;Commitment to Customers</li>
+                <li>&#10003;&nbsp;&nbsp;Low Price Guarantee</li>
+                <li>&#10003;&nbsp;&nbsp;60 Days Warranty</li>
+            </ul><br>
+            <button class="btn1" id="btn1">About Us</button>
+            <button class="otherbtn">Contact Us</button>
+
+        </div>
+    </div>
+    <div class="maincounterdiv">
+        <div class="div-img" id="bluediv2">
+            <div class="bluedivcon">
+                <p style="color:rgb(233, 201, 21);padding-bottom: 10px;font-weight: bolder;">Request Order</p>
+                <h1 style="font-size: 45px;color: rgb(255, 255, 255);padding-bottom: 10px;">Get Special Offer Now</h1>
+                <span style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br>
+                     incididunt ut labore et dolore magna aliqua..</span>
+            </div>
+            <button class="btn1">Request Order</button>
+        </div>
+        <div class="counterdiv">
+            <div class="upperdiv">
+                <img src="thumbsup.jpg" width="80px" height="60px">
+                <h2>4,452</h2>
+                <p style="color: gray;">Successful Projects</p>
+            </div>
+            <div class="upperdiv">
+                <img src="3people.jpg" width="80px" height="50px">
+                <h2>52</h2>
+                <p style="color: gray;">Expert Staff</p>
+            </div>
+            <div class="upperdiv">
+                <img src="world.webp" width="60px" height="45px">
+                <h2>2,241</h2>
+                <p style="color: gray;">Successful Clients</p>
+            </div>
+            <div class="upperdiv">
+                <img src="city.jpg" width="60px" height="50px">
+                <h2>20</h2>
+                <p style="color: gray;">City Store</p>
+            </div>
+        </div>
+    </div>
+    <div class="div-img">
+        <div class="div-block">
+            <span style="color:rgb(10, 126, 209);padding-bottom: 10px;font-weight: bolder;">Our Services</span>
+            <h1 style="font-size: 45px;color: rgb(0, 0, 0);padding-bottom: 10px;">Our Services</h1>
+            <span style="color: gray;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo<br>
+            ligula eget dolor. Aenean massa.</span>
+        </div>
+    </div>
+    <div class="div-img" style="padding-top: 30px;">
+        <div class="shoeimg1">
+            <img src="shoe1.jpg" width="400px" height="600px" >
+            <div class="in-shoe">
+                <h2 style="color: rgb(255, 255, 255);padding-bottom: 10px;">Shoes Clean </h2>
+                <span style="color: white;">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit, sed do eiusmod tempor<br> incididunt ut labore et.</span><br><br>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        <div class="shoeimg1">
+            <img src="shoe2.jpg" width="400px" height="600px" >
+            <div class="in-shoe">
+                <h2 style="color: rgb(255, 255, 255);padding-bottom: 10px;">Shoes Repair </h2>
+                <span style="color: white;">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit, sed do eiusmod tempor<br> incididunt ut labore et.</span><br><br>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        <div class="shoeimg1">
+            <img src="shoe3.jpeg" width="400px" height="600px" >
+            <div class="in-shoe">
+                <h2 style="color: rgb(255, 255, 255);padding-bottom: 10px;">Deep Clean </h2>
+                <span style="color: white;">Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit, sed do eiusmod tempor<br> incididunt ut labore et.</span><br><br>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <div class="div-img" style="padding-top: 60px;">
+        <div class="afford">
+            <p style="color: rgb(32, 159, 249);padding: 5px;font-weight: bolder;">Our Services</p>
+            <h1 style="font-size: 45px;color: black;padding-bottom: 10px;">Affordable Pricing Plans</h1>
+            <span style="color: gray;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+                  tempor incididunt ut labore et dolore magna aliqua.</span><br><br>
+            <button class="btn1">View All Plans</button>
+        </div>
+        <div class="price1">
+            <div class="in-price">
+                <h1>$45</h1>
+                <h3>Basic Clean</h3>
+            </div>
+            <div class="price-list">
+                <ul>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>Free Delivery</span></li>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>Shoes Repair</span></li>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>Standard Clean</span></li>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>1 Week Warranty</span></li>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>24/7 Support</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="div-img" id="Services-div" style="padding-top: 30px;">
+        <div class="price1" style="margin: 30px;">
+            <div class="in-price">
+                <h1>$45</h1>
+                <h3>Basic Clean</h3>
+            </div>
+            <div class="price-list">
+                <ul>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>Free Delivery</span></li>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>Shoes Repair</span></li>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>Standard Clean</span></li>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>1 Week Warranty</span></li>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>24/7 Support</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="price1" style="margin: 30px;">
+            <div class="in-price">
+                <h1>$45</h1>
+                <h3>Basic Clean</h3>
+            </div>
+            <div class="price-list">
+                <ul>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>Free Delivery</span></li>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>Shoes Repair</span></li>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>Standard Clean</span></li>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>1 Week Warranty</span></li>
+                    <li style="color: rgb(10, 126, 209);">&#10003;&nbsp;&nbsp;<span>24/7 Support</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () { // domcontentloaded means that it covers whole webpage
+                const sections = document.querySelectorAll(".div");//query is like getelementbyid but it covers more like classes and ids etc
+
+                const observer = new IntersectionObserver((entries, observer) => {//intersectionobserver checks whether a div or anything enters a viewport
+                    entries.forEach(entry => {// foreach starts a loop for entry
+                    if (entry.isIntersecting) {//isintersecting works under intersectionobserver. it checks that is this element viewed or not
+                        entry.target.classList.add("visible");//entry.taregt checks which element is being observed at the time
+                        observer.unobserve(entry.target);
+                    }
+                    });
+                }, {
+                    threshold: 0.01//it checks if the 10% of the area is covered over scrolling than it will show the div
+                });
+                
+                sections.forEach(section => {
+                    observer.observe(section);// .observe means it tells the observer variable to look it/track it
+                });
+                });
+
+            document.addEventListener("DOMContentLoaded", function () { // domcontentloaded means that it covers whole webpage
+                const sections = document.querySelectorAll(".head");//query is like getelementbyid but it covers more like classes and ids etc
+
+                const observer = new IntersectionObserver((entries, observer) => {//intersectionobserver checks whether a div or anything enters a viewport
+                    entries.forEach(entry => {// foreach starts a loop for entry
+                    if (entry.isIntersecting) {//isintersecting works under intersectionobserver. it checks that is this element viewed or not
+                        entry.target.classList.add("headvis");//entry.taregt checks which element is being observed at the time
+                        observer.unobserve(entry.target);
+                    }
+                    });
+                }, {
+                    threshold: 0.01//it checks if the 10% of the area is covered over scrolling than it will show the div
+                });
+                
+                sections.forEach(section => {
+                    observer.observe(section);// .observe means it tells the observer variable to look it/track it
+                });
+                });
+
+            document.addEventListener("DOMContentLoaded", function () { // domcontentloaded means that it covers whole webpage
+                const sections = document.querySelectorAll(".img1");//query is like getelementbyid but it covers more like classes and ids etc
+
+                const observer = new IntersectionObserver((entries, observer) => {//intersectionobserver checks whether a div or anything enters a viewport
+                    entries.forEach(entry => {// foreach starts a loop for entry
+                    if (entry.isIntersecting) {//isintersecting works under intersectionobserver. it checks that is this element viewed or not
+                        entry.target.classList.add("playvis");//entry.taregt checks which element is being observed at the time
+                        observer.unobserve(entry.target);
+                    }
+                    });
+                }, {
+                    threshold: 0.01//it checks if the 10% of the area is covered over scrolling than it will show the div
+                });
+                
+                sections.forEach(section => {
+                    observer.observe(section);// .observe means it tells the observer variable to look it/track it
+                });
+                });
+
+            document.addEventListener("DOMContentLoaded", function () { // domcontentloaded means that it covers whole webpage
+                const sections = document.querySelectorAll(".btn1");//query is like getelementbyid but it covers more like classes and ids etc
+
+                const observer = new IntersectionObserver((entries, observer) => {//intersectionobserver checks whether a div or anything enters a viewport
+                    entries.forEach(entry => {// foreach starts a loop for entry
+                    if (entry.isIntersecting) {//isintersecting works under intersectionobserver. it checks that is this element viewed or not
+                        entry.target.classList.add("btnvis");//entry.taregt checks which element is being observed at the time
+                        observer.unobserve(entry.target);
+                    }
+                    });
+                }, {
+                    threshold: 0.01//it checks if the 10% of the area is covered over scrolling than it will show the div
+                });
+                
+                sections.forEach(section => {
+                    observer.observe(section);// .observe means it tells the observer variable to look it/track it
+                });
+                });
+
+            document.addEventListener("DOMContentLoaded", function () { // domcontentloaded means that it covers whole webpage
+                const sections = document.querySelectorAll(".div-img-inside");//query is like getelementbyid but it covers more like classes and ids etc
+
+                const observer = new IntersectionObserver((entries, observer) => {//intersectionobserver checks whether a div or anything enters a viewport
+                    entries.forEach(entry => {// foreach starts a loop for entry
+                    if (entry.isIntersecting) {//isintersecting works under intersectionobserver. it checks that is this element viewed or not
+                        entry.target.classList.add("chardiv-vis");//entry.taregt checks which element is being observed at the time
+                        observer.unobserve(entry.target);
+                    }
+                    });
+                }, {
+                    threshold: 0.01//it checks if the 10% of the area is covered over scrolling than it will show the div
+                });
+                
+                sections.forEach(section => {
+                    observer.observe(section);// .observe means it tells the observer variable to look it/track it
+                });
+                });
+            document.addEventListener("DOMContentLoaded", function () { // domcontentloaded means that it covers whole webpage
+                const sections = document.querySelectorAll(".otherbtn");//query is like getelementbyid but it covers more like classes and ids etc
+
+                const observer = new IntersectionObserver((entries, observer) => {//intersectionobserver checks whether a div or anything enters a viewport
+                    entries.forEach(entry => {// foreach starts a loop for entry
+                    if (entry.isIntersecting) {//isintersecting works under intersectionobserver. it checks that is this element viewed or not
+                        entry.target.classList.add("othervis");//entry.taregt checks which element is being observed at the time
+                        observer.unobserve(entry.target);
+                    }
+                    });
+                }, {
+                    threshold: 0.01//it checks if the 10% of the area is covered over scrolling than it will show the div
+                });
+                
+                sections.forEach(section => {
+                    observer.observe(section);// .observe means it tells the observer variable to look it/track it
+                });
+                });
+            document.addEventListener("DOMContentLoaded", function () { // domcontentloaded means that it covers whole webpage
+                const sections = document.querySelectorAll(".divimg-hover");//query is like getelementbyid but it covers more like classes and ids etc
+
+                const observer = new IntersectionObserver((entries, observer) => {//intersectionobserver checks whether a div or anything enters a viewport
+                    entries.forEach(entry => {// foreach starts a loop for entry
+                    if (entry.isIntersecting) {//isintersecting works under intersectionobserver. it checks that is this element viewed or not
+                        entry.target.classList.add("divimghovervis");//entry.taregt checks which element is being observed at the time
+                        observer.unobserve(entry.target);
+                    }
+                    });
+                }, {
+                    threshold: 0.01//it checks if the 10% of the area is covered over scrolling than it will show the div
+                });
+                
+                sections.forEach(section => {
+                    observer.observe(section);// .observe means it tells the observer variable to look it/track it
+                });
+                });
+            document.addEventListener("DOMContentLoaded", function () { // domcontentloaded means that it covers whole webpage
+                const sections = document.querySelectorAll(".counterdiv");//query is like getelementbyid but it covers more like classes and ids etc
+
+                const observer = new IntersectionObserver((entries, observer) => {//intersectionobserver checks whether a div or anything enters a viewport
+                    entries.forEach(entry => {// foreach starts a loop for entry
+                    if (entry.isIntersecting) {//isintersecting works under intersectionobserver. it checks that is this element viewed or not
+                        entry.target.classList.add("counterdivvis");//entry.taregt checks which element is being observed at the time
+                        observer.unobserve(entry.target);
+                    }
+                    });
+                }, {
+                    threshold: 0.01//it checks if the 10% of the area is covered over scrolling than it will show the div
+                });
+                
+                sections.forEach(section => {
+                    observer.observe(section);// .observe means it tells the observer variable to look it/track it
+                });
+                });
+            
+            // document.addEventListener("DOMContentLoaded", () => {
+            //     const counter = document.querySelectorAll("#counter");
+            //     let count = 0;
+            //     let target = 100;
+            //     let speed = 20;
+            //     function inc() {
+            //          for(let count; count < target; count++) {
+            //             counter.textContent = count;
+            //         setTimeout(inc, speed);
+            //     };
+            // };
+            // inc()
+            // });
+
+    </script>                
+</body>
+</html>
