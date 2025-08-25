@@ -164,35 +164,25 @@
 
                 let currentIndex = 0;
 
-                function updateSlide() {
-                    const slider = document.getElementById("slider-support");
-                    slider.style.transform = `translateX(-${currentIndex * 20}%)`;
-                }
-                function updateSlideReset() {
-                    const slider = document.getElementById("in-flex");
-                    slider.style.transform = `translateX(-${currentIndex * 0}%)`;
-                }
-                function nextSlide() {
-                    const totalSlides = document.querySelectorAll('.slide1').length;
-                    if (currentIndex < totalSlides - 3 ) {
-                    currentIndex++;
-                    updateSlide();
-                    }
-                }
+                  function updateSlide() {
+                      const slider = document.getElementById("slider-support");
+                      slider.style.transform = `translateX(-${currentIndex * 37}%)`;
+                  }
+                  function nextSlide() {
+                      const totalSlides = document.querySelectorAll('.slide1').length;
+                      if (currentIndex < totalSlides - 3 ) {
+                      currentIndex++;
+                      updateSlide();
+                      }
+                  }
 
-                function prevSlide() {
-                    if (currentIndex > 0) {
-                    currentIndex--;
-                    updateSlide();
-                    }
-                }
-                function lastSlide() {
-                    const totalSlides = document.querySelectorAll(".slide1").length;
-                    if (currentIndex === totalSlides - 3) {
-                        updateSlideReset();
-                        currentIndex = 0;
-                    }
-                }
-                setInterval(()=> {
-                    nextSlide();
-                }, 3000);
+                  setInterval(()=> {
+                      nextSlide();
+                  }, 5000);
+
+                  let shadow = document.querySelector(".mouse-shadow");
+
+                  document.addEventListener("mousemove", (e)=>{
+                    shadow.style.left = `${e.clientX}px`;
+                    shadow.style.top = `${e.clientY}px`;
+                  });
