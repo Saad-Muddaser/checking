@@ -363,6 +363,58 @@
                 display: none;
                 margin-top: 30px;
             }
+            .navi-div {
+                position: relative;
+                display: inline-block;
+                }
+                .slide-nav {
+                /* display: none; */
+                box-sizing: border-box;
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                top: 45px;left: -50px;
+                z-index: 0;
+                color: black;
+                background-color: white;
+                width: 0px;
+                height: 500px;
+                
+                transition:.5s ease;
+                }
+                .slide-link {
+                text-decoration: none;
+                color: black;
+                font-size: 24px;
+                }
+                li:hover {
+                background-color: #eeeeee;
+                }
+                li:first-child {
+                background: #eeeeee;
+                
+                }
+                li {
+                cursor: pointer;
+                margin-bottom: 3px;
+                padding:20px 40px;
+                }
+                .slide-nav img {
+                    margin-top: 40px;
+                    margin-left: 80px;
+                }
+                .toggle {
+                /* display: block; */
+                overflow: scroll;
+                width: 500px;
+                opacity: 1;
+                visibility: visible;
+                }
+                .cancelBtn {
+                content: url("cancel-removebg-preview.png");
+                width:40px ;height: 40px;
+                padding-right: 30px;
+                }
             #span-1 {
                 font-size: 20px
             }
@@ -386,14 +438,11 @@
                     display: none;
                 }
                 .div4 {
-                    padding: 2px;
+                    /* padding: 2px; */
                     width: 50%;
-                    padding-left: 135px;
-                    margin-left: 0px;
+                    padding-left:0 ;
+                    margin-left: 125px;
                 }
-                /* .image-logo {
-                    width: 200px;
-                } */
                  .div6 {
                     width: 150px;
                     float: right;
@@ -411,24 +460,6 @@
                     right: 15px;
                     bottom:-145 ;
                 }
-                /* #span-1 {
-                    font-size: 8px;
-                }
-                .com-div {
-                    max-width:300px ;
-                    font-size: 8px;
-                }
-                .comment  {
-                   font-size: 8px;
-                }
-                .com-img {
-                    margin-top: 6px;
-                    width: 25px;height: 30px;
-                    position: relative;
-                    bottom: 0px;
-                    left: 10px;
-                } */
-
             }
         </style>
     </head>
@@ -448,7 +479,29 @@
             
         <div class="nav-div">
             <div class="nav">
-                <a href="#"><img src="nav-removebg-preview.png" alt="nav" width="50px" height="60px" class="hid-nav"></a>
+                <div class="navi-div" id="navi-div">
+                    <a href="#" class="nav1" id="nav1"><img src="nav-removebg-preview.png"alt="nav" width="70px" height="60px" class="hid-nav"></a>
+                    <div class="slide-nav" id="slide-nav">
+                    <ul style="list-style-type: none;">
+                        <li><a href="#" class="slide-link" id="link-id">home</a></li>
+                        <li><a href="#" class="slide-link" >laliga</a></li>
+                        <li><a href="#" class="slide-link" >premier league</a></li>
+                        <li><a href="#" class="slide-link" >serie A</a></li>
+                        <li><a href="#" class="slide-link" >Retros</a></li>
+                        <li><a href="#" class="slide-link" >Ronaldo</a></li>
+                        <li><a href="#" class="slide-link" >Messi</a></li>
+                        <li><a href="#" class="slide-link" >KIDS</a></li>
+                        <li><a href="#" class="slide-link" >international</a></li>
+                        <li><a href="#" class="slide-link" >anime</a></li>
+                        <li><a href="#" class="slide-link" >shorts</a></li>
+                        <li><a href="#" class="slide-link" >drilldrops</a></li>
+                        <li><a href="#" class="slide-link" >winter</a></li>
+                        <li><a href="#" class="slide-link" >return and exchange policy</a></li>
+                        <li><a href="#" class="slide-link" >washing guidlines</a></li>       
+                    </ul>
+                    <img src="instacon-removebg-preview.png" width="30px" height="30px">
+                    </div>
+                </div>
             </div>
             <div class="div4">
                 <img src="logo.jpg" alt="logo" class="image-logo" width="100px" height="60px">
