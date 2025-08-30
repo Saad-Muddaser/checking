@@ -3,322 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nova+Flat&family=Playwrite+AU+QLD:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- <link content="c:\Users\DELL\Downloads\astronomus.zip"> -->
+   <link rel="stylesheet" href="counter.css">
   <link rel="stylesheet" href="shoelace.css">
-  <title>Document</title>
-  <style>
-            .linear {
-              border-radius: 30px;
-              background:linear-gradient(-50deg,transparent,transparent,rgb(207, 89, 140),rgb(207,89,140),rgb(207,89,140),transparent,transparent);
-              color: rgb(209, 209, 209);
-               ;
-              text-decoration: none;
-              font-size: larger;
-              font-weight: bolder;
-              background-size: 300% 300%;
-              padding: 18px 30px;
-              width: 150px;
-              border: 1px solid white;
-              /* height: 80px; */
-              transition: 0.3s ease;
-              text-align: center;
-              
-            }
-            .linear:hover {
-               animation: gradient-shift 1s 1 alternate;
-            }
-            @keyframes gradient-shift {
-              0%{background-position: 0% 50%;}
-             
-              100%{background-position:50% 100%;}
-            }
-            .gradient-border {
-              padding: 10px;
-              border-radius: 16px;
-              background: 
-                linear-gradient(#fff, #fff) padding-box,              /* Inner background */
-                linear-gradient(to right, #ff00cc, #333399) border-box; /* Gradient border */
-              border: 4px solid transparent; /* Needed for border-box trick */
-          }
-          .gradient-text {
-            background: linear-gradient(to right, #ff6a00, #ee0979);
-            font-size: larger;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; /* For Safari/Chrome */
-            background-clip: text; /* For Firefox (with prefix-less fallback) */
-            color: transparent;
-          }
-          .mouse-shadow {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 4px;
-            /* background: rgba(0, 0, 0, 0.2); */
-            border-radius: 50%;
-            pointer-events:none; /* so it doesn't block clicks */
-            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
-            transform: translate(-50%, -50%);
-            transition: transform 0.05s ease;
-            background: rgba(0, 150, 255, 0.2);
-            box-shadow: 0 0 400px 45px rgba(0, 150, 255, 0.6);
-
-          }
-          .box {
-            width: 50px;
-            height: 50px;
-            background: red;
-            position: absolute;
-            left: 0;
-          }
-          .gradient-hover-button {
-            padding: 12px 24px;
-            font-size: 16px;
-            background: #333; /* default solid background */
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            color: white;
-           transition: background 0.5s ease, color 0.5s ease;
-            
-          }
-
-/* On hover: apply gradient */
-
-.gradient-hover-button:hover {
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  color: #fff;
-}
-.fancy-gradient-button {
-  position: relative;
-  padding: 12px 24px;
-  font-size: 16px;
-  color: white;
-  background: #333; /* Default background */
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  overflow: hidden;
-  z-index: 1;
-  transition: color 0.3s ease;
-}
-
-.fancy-gradient-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(120deg, #6e8efb, #a777e3);
-  transition: left 0.5s ease;
-  z-index: -1;
-}
-
-.fancy-gradient-button:hover::before {
-  left: 0;
-}
-
-.fancy-gradient-button:hover {
-  color: #fff; /* Optional: keep text color bright */
-}
-.sweep-gradient-button {
-  position: relative;
-  padding: 12px 24px;
-  font-size: 16px;
-  color: white;
-  background: #222; /* initial background */
-  border: none;
-  border-radius: 8px;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 0;
-  transition: color 1s ease;
-}
-
-.sweep-gradient-button::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%; /* start off-screen to the left */
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(-45deg,transparent,transparent, #6e8efb,#6e8efb,#6e8efb,transparent,transparent);
-  transition: left 1s ease;
-  z-index: -1; /* sit behind the text */
-}
-
-.sweep-gradient-button:hover::before{
-  left: 100%; /* sweep in */
-}
-
-.sweep-gradient-button:hover {
-  color: #fff; /* optional: ensure text stays visible */
-}
-.linear-grad {
-  position: relative;
-  padding: 20px 30px;
-  width: 150px;
-  border: 2px solid white;
-  border-radius: 40px;
-  cursor: pointer;
-  overflow: hidden;
-  z-index: 1;
-  color: white;
-  background-color: rgba(194, 191, 191, 0.216);
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
-  transition: color 0.5s ease;
-}
-.linear-grad::before {
-  content: "";
-  position: absolute;
-  top: 0;left: 100%;
-  width: 100%;height: 100%;
-  background: linear-gradient(-50deg,transparent,transparent,rgb(246, 142, 73),rgb(246,142,73),rgb(246,142,73),rgb(246,142,73),transparent,transparent);
-  background-position: 200% 200%;
-  z-index: -1;
-  transition: left .5s ease;
-}
-.linear-grad:hover::before {
-  left:-100% ;
-}
-#linear-grad2 {
-  display: inline-block;
-  padding: 15px 25px;
-  width: 200px;
-  border: 2px solid white;
-  outline: none;
-  border-radius: 40px;  
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
-  text-align: center;
-  text-decoration: none;
-  margin: 5px;
-  transition: all .5s ;
-  font-size: 16px;
-}
-#linear-grad2 span {
-  position: relative;
-  display: inline-block;
-  transition: .5s ;
-  cursor: pointer;
-  font-weight: 600;
-  
-}
-#linear-grad2 span::after {
-  content: "\1F865";
-  font-size: 25px;
-  position: absolute;
-  top:-13px;;right: -25px;
-  opacity: 0;
-  margin: 4px;
-  transition: .5s ;
-}
-#linear-grad2:hover{
-  width: 210px;
-}#linear-grad2:hover span {
-  padding-right: 25px;
-}
-#linear-grad2:hover span::after {
-  opacity: 1;
-  right: -5px;
-}
-.btn-shift {
-  width: 200px;
-  padding: 20px;
-  background-color: chartreuse;
-  color: white;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  font-size: 24px;
-  text-align: center;
-  box-shadow: 0 10px rgb(74, 74, 74);
-}
-.btn-shift:hover {
-  background-color: rgb(29, 255, 8);
-}
-.btn-shift:active {
-  box-shadow: 0 5px rgb(74, 74, 74);
-  transform: translateY(5px);
-}
-.navi-div {
-  position: relative;
-  display: inline-block;
-}
-.slide-nav {
-  /* display: none; */
-  box-sizing: border-box;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 130px;left: 10px;
-  z-index: 0;
-  color: black;
-  background-color: white;
-  width: 0px;
-  height: 500px;
-  margin: 20px;
-  transition:.5s ease;
-}
-.slide-link {
-  text-decoration: none;
-  color: black;
-  font-size: 24px;
-}
-li:hover {
-  background-color: #eeeeee;
-}
-li:first-child {
-  background: #eeeeee;
-  
-}
-li {
-  cursor: pointer;
-  margin-bottom: 3px;
-  padding:20px 40px;
-}
-.slide-nav img {
-  margin-left: 40px;
-  margin-top: 40px;
-
-}
-.toggle {
-  /* display: block; */
-  overflow: scroll;
-  width: 500px;
-  opacity: 1;
-  visibility: visible;
-}
-.cancelBtn {
-  content: url("cancel-removebg-preview.png");
-  width:80px ;height: 80px;
-  padding: 10px;
-  margin-left: 15px;
-}
-.fancy-btn {
-  padding: 12px 24px;
-  font-size: 16px;
-  background: #6e8efb;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  transition: transform 0.4s cubic-bezier(0,1,1,0); /* bounce-like */
-}
-
-.fancy-btn:hover {
-  transform: scale(1.1);
-}
-.mouse-shadow2 {
-  color: white;
-  background-color: #ff6a00;
-  width: 100px;height: 50px;
-}
-
-  </style>
+  <title>Counter</title>
 </head>
-<body style="background-color: rgba(0, 0, 0, 0.981);">
+<body style="background-color: rgba(0, 0, 0, 0.981);background-image: url('https://themes.the4.co/ecomus/assets/images/empower/bg.png');background-position: 40% 40%;">
   <div class="navi-div" id="navi-div">
     <a href="#" class="nav1" id="nav1"><img src="nav-removebg-preview.png" width="140px" height="120px"></a>
     <div class="slide-nav" id="slide-nav">
@@ -412,95 +105,8 @@ li {
     <p id="demo"></p>
     <div class="mouse-shadow"></div>
     <div class="mouse-shadow2"></div>
-    <div class="box"></div>
-  <script>
-    let currentIndex = 0;
-
-                  function updateSlide() {
-                      const slider = document.getElementById("slider-support");
-                      slider.style.transform = `translateX(-${currentIndex * 37}%)`;
-                  }
-                  function nextSlide() {
-                      const totalSlides = document.querySelectorAll('.slide1').length;
-                      if (currentIndex < totalSlides - 3 ) {
-                      currentIndex++;
-                      updateSlide();
-                      }
-                  }
-
-                  setInterval(()=> {
-                      nextSlide();
-                  }, 3000);
-
-                  function updateSlide() {
-                      const slider = document.getElementById("slider-support");
-                      slider.style.transform = `translateX(-${currentIndex * 37}%)`;
-                  }
-                  function nextSlide() {
-                      const totalSlides = document.querySelectorAll('.slide1').length;
-                      if (currentIndex < totalSlides - 3 ) {
-                      currentIndex++;
-                      updateSlide();
-                      }
-                  }
-
-                  setInterval(()=> {
-                      nextSlide();
-                  }, 3000);
-
-                  function animate() {
-                    console.log("Animating at ~60fps");
-                    requestAnimationFrame(animate);
-                  }
-                  window.addEventListener("resize", ()=> {
-                    document.getElementById('demo').innerHTML = Math.random();
-                  })
-
-                  const shadow = document.querySelector('.mouse-shadow');
-
-                document.addEventListener('mousemove', (e) => {
-                  shadow.style.left = `${e.clientX}px`;
-                  shadow.style.top = `${e.clientY}px`;
-                });
-                // let mouseX = 0, mouseY = 0;
-                //   let shadowX = 0, shadowY = 0;
-
-                //   document.addEventListener('mousemove', (e) => {
-                //     mouseX = e.clientX;
-                //     mouseY = e.clientY;
-                //   });
-
-                //   function animate() {
-                //     shadowX += (mouseX - shadowX) * 0.1;
-                //     shadowY += (mouseY - shadowY) * 0.1;
-                //     shadow.style.left = `${shadowX}px`;
-                //     shadow.style.top = `${shadowY}px`;
-
-                //     requestAnimationFrame(animate);
-                //   }
-
-                //   animate();
-                
-
-
-
-let x = 0;
-
-function animate() {
-  x += 3;
-  document.querySelector('.box').style.left = x + 'px';
-
-  if (x < 300) {
-    requestAnimationFrame(animate); // Keep animating & smooth animation
-  }
-}
-
-animate(); // Start the animation
-
-
-
-
-  </script>
+    <div class="hidden" style="width: 200px;height: 200px;"></div>
+  
   <div style="width: 300px;background-color: rgba(14, 13, 13, 0.611);height: 200px;display: flex;align-items: center;justify-content: center;">
   <a href="#" class="linear">open a store</a></div>
   <div style="width: 300px;background-color: rgba(14, 13, 13, 0.611);height: 200px;display: flex;align-items: center;justify-content: center;">
@@ -511,13 +117,360 @@ animate(); // Start the animation
   <div class="gradient-border">
   <p>Gradient Border!</p>
 </div>
+<div id="progress" style="position:fixed;top:0;left:0;height:5px;background:red;width:0;"></div>
 <p class="gradient-text">This is gradient text</p>
 <a href="#" class="gradient-text">Gradient Link</a>
-<button class="gradient-hover-button">Hover Me</button>
+<button class="gradient-hover-button" ondblclick="openNewPopup()">Hover Me</button>
 <button class="fancy-gradient-button">Hover Me</button>
 <button class="sweep-gradient-button">Hover Me</button>
 <button class="fancy-btn">Hover Me</button>
+<div style="display: block;">
+  <div class="main-display-image1">
+    <div class="display-image1">
+      <img src="3dots.png" width="12%" height="45px" class="dots">
+      <img src="https://freepsddesign.com/wp-content/uploads/2020/01/Free-Software-download-website-Landing-Page-Mockup.jpg" width="90%" height="460px" class="main-img">
+      <a href="#" class="link-grad">supplement</a>
+      <button class="btn-grad">&#10561; version 1.9</button>
+      <div class="fade-black"></div>
+      <div class="btn-div"><button class="inside-img"><span style="color: white;font-weight: 700;">Demo</span></button></div>
+    </div>
+    <div class="display-image1" id="display-image2">
+      <img src="3dots.png" width="12%" height="45px" class="dots">
+      <img src="https://freepsddesign.com/wp-content/uploads/2020/01/Free-Software-download-website-Landing-Page-Mockup.jpg" width="90%" height="460px" class="main-img">
+      
+      <a href="#" class="link-grad">supplement</a>
+      <button class="btn-grad" id="btn-grad2">&#10561; version 1.9</button>
+      <div class="fade-black"></div>
+      <div class="btn-div"><button class="inside-img"><span style="color: white;font-weight: 700;">Demo</span></button></div>
+    </div>
+    <div class="display-image1">
+      <img src="3dots.png" width="12%" height="45px" class="dots">
+      <img src="https://freepsddesign.com/wp-content/uploads/2020/01/Free-Software-download-website-Landing-Page-Mockup.jpg" width="90%" height="460px" class="main-img">
+      <a href="#" class="link-grad">supplement</a>
+      <button class="btn-grad">&#10561; version 1.9</button>
+      <div class="fade-black"></div>
+      <div class="btn-div"><button class="inside-img"><span style="color: white;font-weight: 700;">Demo</span></button></div>
+    </div>
+    
+  </div>
+  <div class="main-display-image1">
+    <div class="display-image1">
+      <img src="3dots.png" width="12%" height="45px" class="dots">
+      <img src="https://freepsddesign.com/wp-content/uploads/2020/01/Free-Software-download-website-Landing-Page-Mockup.jpg" width="90%" height="460px" class="main-img">
+      <a href="#" class="link-grad">supplement</a>
+      <button class="btn-grad">&#10561; version 1.9</button>
+      <div class="fade-black"></div>
+      <div class="btn-div"><button class="inside-img"><span style="color: white;font-weight: 700;">Demo</span></button></div>
+    </div>
+    <div class="display-image1" id="display-image2">
+      <img src="3dots.png" width="12%" height="45px" class="dots">
+      <img src="https://freepsddesign.com/wp-content/uploads/2020/01/Free-Software-download-website-Landing-Page-Mockup.jpg" width="90%" height="460px" class="main-img">
+      
+      <a href="#" class="link-grad">supplement</a>
+      <button class="btn-grad" id="btn-grad2">&#10561; version 1.9</button>
+      <div class="fade-black"></div>
+      <div class="btn-div"><button class="inside-img"><span style="color: white;font-weight: 700;">Demo</span></button></div>
+    </div>
+    <div class="display-image1">
+      <img src="3dots.png" width="12%" height="45px" class="dots">
+      <img src="https://freepsddesign.com/wp-content/uploads/2020/01/Free-Software-download-website-Landing-Page-Mockup.jpg" width="90%" height="460px" class="main-img">
+      <a href="#" class="link-grad">supplement</a>
+      <button class="btn-grad">&#10561; version 1.9</button>
+      <div class="fade-black"></div>
+      <div class="btn-div"><button class="inside-img"><span style="color: white;font-weight: 700;">Demo</span></button></div>
+    </div>
+    
+  </div>
+  <div class="main-display-image1">
+    <div class="display-image1">
+      <img src="3dots.png" width="12%" height="45px" class="dots">
+      <img src="https://freepsddesign.com/wp-content/uploads/2020/01/Free-Software-download-website-Landing-Page-Mockup.jpg" width="90%" height="460px" class="main-img">
+      <a href="#" class="link-grad">supplement</a>
+      <button class="btn-grad">&#10561; version 1.9</button>
+      <div class="fade-black"></div>
+      <div class="btn-div"><button class="inside-img"><span style="color: white;font-weight: 700;">Demo</span></button></div>
+    </div>
+    <div class="display-image1" id="display-image2">
+      <img src="3dots.png" width="12%" height="45px" class="dots">
+      <img src="https://freepsddesign.com/wp-content/uploads/2020/01/Free-Software-download-website-Landing-Page-Mockup.jpg" width="90%" height="460px" class="main-img">
+      
+      <a href="#" class="link-grad">supplement</a>
+      <button class="btn-grad" id="btn-grad2">&#10561; version 1.9</button>
+      <div class="fade-black"></div>
+      <div class="btn-div"><button class="inside-img"><span style="color: white;font-weight: 700;">Demo</span></button></div>
+    </div>
+    <div class="display-image1">
+      <img src="3dots.png" width="12%" height="45px" class="dots">
+      <img src="https://freepsddesign.com/wp-content/uploads/2020/01/Free-Software-download-website-Landing-Page-Mockup.jpg" width="90%" height="460px" class="main-img">
+      <a href="#" class="link-grad">supplement</a>
+      <button class="btn-grad">&#10561; version 1.9</button>
+      <div class="fade-black"></div>
+      <div class="btn-div"><button class="inside-img"><span style="color: white;font-weight: 700;">Demo</span></button></div>
+    </div>
+    
+  </div>
+</div>
+<div class="power">
+  <img src="5243c823-072e-4b15-b419-12ad4ccc2369.svg" width="150px" height="150px" style="margin:  30px;">
+    <div class="div-block2">
+      <h1 class="powerful">POWERFUL</h1><br>
+      <h1 class="outline-wrap">
+      <span class="fill"> FEATURES</span>
+      <span class="stroke"> FEATURES</span>
+      </h1>
+    </div>
+    <div class="div-block3">
+    <div class="in-div-block3">
+      <div class="div-flex">
+              <div class="wrapper">
+        <!-- Circle div -->
+        <div class="circle"></div>
 
+        <!-- Rotating text around border -->
+        <svg viewBox="0 0 200 200" class="rotating-text">
+          <defs>
+            <!-- Define circular path -->
+            <path id="circlePath"
+                  d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/>
+          </defs>
+
+          <!-- Text on the path -->
+          <text font-size="18px" fill="white" font-weight="700" letter-spacing="27.5">
+            <textPath href="#circlePath" startOffset="0%">
+              HIGHCONVERTING
+            </textPath>
+          </text>
+        </svg>
+      </div>
+        <div class="circular-div">
+          <img src="9b3179ae-e71c-4a6b-b0a8-1e9a39685d5a.svg" width="20px" height="45px" class="lightning">
+        </div>
+        <img src="logo_white.svg" width="200px" height="80px" style="margin-left: 40px;">
+      </div>
+      <span class="span2">Explore highlight features that make Ecomus standout from<br> others. Buy one theme and access all these eCommerce tools.</span>
+    </div>
+  </div>
+</div>
+<div class="head-main-div">
+    <div class="main-box">
+        <div class="box" style="height:600px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/clean-html5-website-templates.jpg" width="90%" height="400px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+        <div class="box" style="height:400px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/koral-beautiful-website-template.jpg" width="90%" height="400px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+        <div class="box" style="height:300px; width:90%">
+          <span class="gradient-text">BOOST CONVERSION</span>
+          <h2>advanced product filter</h2>
+          <span class="span1">Help customers sort out favorite items with ease. Supported various product attributes, product tags and more.</span>
+          <div class="img-center">
+            <img src="furniture-removebg-preview.png" width="70%" height="280px" >
+          </div>
+          <button class="butn2">+</button>
+        </div>
+        <div class="box" style="height:600px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="https://cdn.webwave.me/files/dynamicContent/sites/hue725/images/en/webpage_355/mes7su70/element_27070/10/Simple-website-templates---copywriter-portfolio.webp" width="90%" height="400px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+        <div class="box" style="height:500px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="https://uicookies.com/wp-content/uploads/2018/09/boltex-simple-website-template-1000x750.jpg" width="90%" height="400px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+        <div class="box" style="height:300px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/clean-html5-website-templates.jpg" width="90%" height="400px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+
+        </div>
+        <div class="box" style="height:550px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="Precise-personal-template-1320x825-removebg-preview.png" width="90%" height="350px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+
+        </div>
+        <div class="box" style="height:700px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="xeone-multipurpose-website-template-removebg-preview.png" width="90%" height="500px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+        <div class="box" style="height:600px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="auto-draft-129-removebg-preview.png" width="90%" height="400px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+    </div>
+    <div class="main-box">
+        <div class="box" style="height:600px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="xeone-multipurpose-website-template-removebg-preview.png" width="90%" height="500px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+        <div class="box" style="height:700px; width:90%">
+          <span class="gradient-text">BOOST CONVERSION</span>
+          <h2>advanced product filter</h2>
+          <span class="span1">Help customers sort out favorite items with ease. Supported various product attributes, product tags and more.</span>
+          <div class="img-center">
+            <img src="https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/b77d73a00c656d1f2b33b3e1e79a963202e9773a4d34f47276f027532596ac7c1615215795702.jpg" width="70%" height="500px" style="padding: 30px;">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+        <div class="box" style="height:600px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/clean-html5-website-templates.jpg" width="90%" height="400px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+        <div class="box" style="height:300px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/koral-beautiful-website-template.jpg" width="90%" height="400px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+        <div class="box" style="height:500px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="auto-draft-129-removebg-preview.png" width="90%" height="400px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+        <div class="box" style="height:400px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/clean-html5-website-templates.jpg" width="90%" height="400px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+        <div class="box" style="height:500px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="https://cdn.webwave.me/files/dynamicContent/sites/hue725/images/en/webpage_355/mes7su70/element_27070/10/Simple-website-templates---copywriter-portfolio.webp" width="90%" height="400px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+        <div class="box" style="height:600px; width:90%">
+          <span class="gradient-text">HIGHLIGHT</span>
+          <h2>one click import demo</h2>
+          <span class="span1">import ecomus demo instantly & easily using EcomRise - All in one upsell app</span>
+          <div class="img-center">
+            <img src="Precise-personal-template-1320x825-removebg-preview.png" width="90%" height="350px" style="padding: 40px">
+          </div>
+          <button class="butn2">+</button>
+        </div>
+    </div>
+</div>
+<div class="slide-text">
+  <div class="main-textSlider">
+    <div class="bullet"></div><h1>build your amazing store with shopify 2.0</h1>
+    <div class="bullet" ></div><h1 >build your amazing store with shopify 2.0</h1>
+    <div class="bullet" ></div><h1 >build your amazing store with shopify 2.0</h1>
+  </div> 
+</div>
+<div class="hr"></div>
+<div class="slide-images">
+<div class="in-slide-image" style="display: flex;justify-content: flex-start;align-items: flex-start;">
+<div class="main-imageSlider">
+    <img src="https://themes.the4.co/ecomus/assets/images/b_ecomus/13.png" width="400px" height="200px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/7.png" width="400px" height="300px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/partner/6_1.jpg" width="400px" height="400px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/8.png" width="400px" height="200px" class="imagesofslider">
+</div>
+<div class="main-imageSlider">
+    <img src="https://themes.the4.co/ecomus/assets/images/b_ecomus/13.png" width="400px" height="300px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/7.png" width="400px" height="400px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/partner/6_1.jpg" width="400px" height="200px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/8.png" width="400px" height="300px" class="imagesofslider">
+</div>
+<div class="main-imageSlider">
+    <img src="https://themes.the4.co/ecomus/assets/images/b_ecomus/13.png" width="400px" height="500px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/7.png" width="400px" height="300px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/partner/6_1.jpg" width="400px" height="200px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/8.png" width="400px" height="200px" class="imagesofslider">
+</div>
+<div class="main-imageSlider">
+    <img src="https://themes.the4.co/ecomus/assets/images/b_ecomus/13.png" width="400px" height="300px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/7.png" width="400px" height="300px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/partner/6_1.jpg" width="400px" height="400px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/8.png" width="400px" height="200px" class="imagesofslider">
+</div>
+<div class="main-imageSlider">
+    <img src="https://themes.the4.co/ecomus/assets/images/b_ecomus/13.png" width="400px" height="200px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/7.png" width="400px" height="300px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/partner/6_1.jpg" width="400px" height="300px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/8.png" width="400px" height="400px" class="imagesofslider">
+</div>
+<div class="main-imageSlider">
+    <img src="https://themes.the4.co/ecomus/assets/images/b_ecomus/13.png" width="400px" height="400px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/7.png" width="400px" height="200px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/partner/6_1.jpg" width="400px" height="300px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/8.png" width="400px" height="200px" class="imagesofslider">
+</div>
+<div class="main-imageSlider">
+    <img src="https://themes.the4.co/ecomus/assets/images/b_ecomus/13.png" width="400px" height="500px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/7.png" width="400px" height="200px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/partner/6_1.jpg" width="400px" height="200px" class="imagesofslider">
+    <img src="https://themes.the4.co/ecomus/assets/images/grid_2/8.png" width="400px" height="200px" class="imagesofslider">
+</div>
+</div>
+</div>
+<!-- <div class="scroll1">
+  <div class="scroll2">
+    <img src="homepageimg.jpg" width="800px" height="300px">
+  </div>
+</div> -->
   <script src="javascript.js"></script>
 </body>
 </html>
