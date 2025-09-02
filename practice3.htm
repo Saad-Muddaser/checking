@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practice3</title>
+  <style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  .not-box {
+    width: 200px;
+    height: 150px;
+    background-color: aquamarine;
+    display: block;
+  }
+  .main-box {
+    display: block;
+    /* flex-wrap: wrap; */
+    /* float: left; */
+  }
+  .box {
+    margin: 100px auto;
+    height: 150px;
+    background: rgb(246, 72, 72);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    width: 80%;
+    border-radius: 8px;
+  }
+
+  .box.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+<div class="not-box"></div>
+  
+<div class="main-box">
+    <div class="box" style="height:120px; width:60%"></div>
+    <div class="box" style="height:200px; width:70%"></div>
+    <div class="box" style="height:100px; width:50%"></div>
+    <div class="box" style="height:180px; width:90%"></div>
+</div>
+<div class="not-box"></div>
+<div class="not-box"></div>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.boundingClientRect.top > 0) {
+        // scrolling down: make visible
+        entry.target.classList.add("visible");
+      } 
+      if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
+        // scrolling back up: hide again
+        entry.target.classList.remove("visible");
+      }
+    });
+  }, {
+    threshold: 0.1 // triggers when 10% is visible
+  });
+
+  document.querySelectorAll(".box").forEach(box => observer.observe(box));
+</script>
+<script src="practice.js"></script>
+</body>
+</html>
