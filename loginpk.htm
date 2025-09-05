@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
         <title>login</title>
         <style>
             body {
@@ -19,6 +20,40 @@
                 align-items: center; */
                 padding: 0;
                 margin: 0;
+            }
+            #popup-div {
+                width: 100%;height: 100%;
+                background-color: rgba(32, 32, 32, 0.258);
+                display: none;
+                transition: display 1s ease;
+                align-items: center;justify-content: center;
+                position: fixed;
+                top: 0;left: 0;
+                z-index: 10;
+            }
+            .in-popup {
+                width: 500px;height: 400px;
+                background-color: rgb(228, 228, 228);
+                border-radius: 5px;
+                box-shadow: 2px 2px rgb(206, 206, 206),-2px -2px rgb(205, 205, 205);
+                display: flex;
+                align-items: center;justify-content: center;
+            }
+            .inside-popup {
+                display: block;
+                text-align: center;
+                line-height: 2px;
+            }
+            .underinput {
+                display: none;
+                justify-content: center;
+                width: 71%;height:15px ;
+            }
+            .underinput span {
+                font-size: 12px;
+                color: rgb(197, 0, 0);
+                text-shadow: 0px 0px 1px rgb(197, 0, 0);
+                word-spacing: 1.5;
             }
             .main {
                 box-sizing: border-box;
@@ -308,12 +343,22 @@
         <div class="div-1">
             <h1 style="font-family: Roboto; font-size: 35px; font-family: 'Intel One Mono', monospace;">Login</h1><br>
             
-            <input type="email" class="pass" id="email" placeholder="Email"><br>
-            <input type="password" class="pass" id="pass" placeholder="Password"><br>
+            <input type="email" class="pass" id="email" placeholder="Email" required><br>
+            <div class="underinput" id="underinput1"><span>invalid. try Again</span></div>
+            <input type="password" class="pass" id="pass" placeholder="Password" required><br>
+            <div class="underinput" id="underinput2"><span>invalid. try Again</span></div>
         
             <a href="#" id="a1">forget your password?</a><br><br>
-            <button type="submit" class="btn-1">Sign In</button><br>
+            <button type="submit" class="btn-1" onclick="login()">Sign In</button><br>
             <a href="createacc.htm" id="a2">Create Account</a>
+        </div>
+        <div class="div9" id="popup-div">
+            <div class="in-popup">
+                <div class="inside-popup">
+                    <h2>SIGN IN SUCCESSFUL</h2>
+                    <h1>WELCOME BACK!!</h1>
+                </div>
+            </div>
         </div>
         <div class="div8">
             <span style="margin-top: 15px;padding-top:15px ;font-family: Arial, Helvetica, sans-serif;">let customers speak for us</span><br>
@@ -363,5 +408,6 @@ great just the colors a bit light than original<br><br>
                     <img src="instacon-removebg-preview.png" class="image" id="image3" alt="instaicon" width="20px" height="20px">
                 </div>
         </div>
+        <script src="loginpk.js"></script>
     </body>
 </html>

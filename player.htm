@@ -211,6 +211,25 @@ great just the colors a bit light than original<br><br>
                     <img src="instacon-removebg-preview.png" class="image" id="image3" alt="instaicon" width="20px" height="20px">
                 </div>
         </div>
-         <script src="footballshirts.js"></script>
+         <script>
+            function setupButtonGroup(groupId) {
+                const group = document.getElementById(groupId);
+                const buttons = group.querySelectorAll('button');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                    // Remove focus class from all in this group
+                    buttons.forEach(btn => btn.classList.remove('focused'));
+                    // Add to clicked button
+                    button.classList.add('focused');
+                    });
+                });
+                }
+
+                // Setup both groups
+                setupButtonGroup('group1');
+                setupButtonGroup('group2');
+                setupButtonGroup('group3');
+         </script>
     </body>
 </html>

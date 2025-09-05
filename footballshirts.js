@@ -74,3 +74,21 @@
                 setInterval(()=> {
                     nextSlide();
                 }, 30000);                
+
+                // setTimeout(() => {
+                //     window.open("laliga.htm","_self")
+                // }, 5000);
+
+                function goBack() {
+                    window.open("laliga.htm","_self")
+                }
+let imageHome = document.getElementById("image2");
+let mainSearch = document.getElementById("main-search-bar");
+let search = document.getElementById("searchpopup").addEventListener("click", ()=> {
+        mainSearch.style.display = "flex";
+        imageHome.style.opacity = "0.8";
+    });
+let cancelSearch = document.getElementById("cancelSearch").addEventListener("click", ()=> {
+    mainSearch.style.display = "none";
+    imageHome.style.opacity = "1";
+})
